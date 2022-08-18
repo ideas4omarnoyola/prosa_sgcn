@@ -9,9 +9,6 @@ let paginasVistas = 0;
 let calificacionFinal = 0;
 let intentos = 1;
 
-// Variable de Didi
-let totalPuntos = 0;
-
 // Iniciar App
 function iniciarAplicacion(){
     conectarLMS();
@@ -230,9 +227,4 @@ function siguienteIntento(){
 
 function reiniciarInntentos(){
     intentos = 1;
-}
-
-// Sumar puntos didi--------------------------------------------------------
-function addPuntaje(puntos){
-    totalPuntos += puntos;
 }
