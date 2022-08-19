@@ -1,5 +1,8 @@
 // Al cargarse la página--------------------------------------------------------
 $(window).on("load", function(){
+
+    //Cargar Páginas total------------------------------------------------------
+    generarPaginas();
     
     // Funciones de los botones--------------------------------------------------
 
