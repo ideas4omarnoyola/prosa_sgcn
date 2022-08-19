@@ -1,5 +1,8 @@
 // Al cargarse la página--------------------------------------------------------
 $(window).on("load", function(){
+
+    //Cargar Páginas total------------------------------------------------------
+    generarPaginas();
     
     // Funciones de los botones--------------------------------------------------
 
@@ -44,7 +47,7 @@ $(window).on("load", function(){
     botonesTemario();
 
     // Modo desarrollador y avanzar con teclas
-    // modoDesarrollador();
+    modoDesarrollador();
     // moverTeclas();
 });
 

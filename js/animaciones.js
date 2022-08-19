@@ -181,6 +181,37 @@ gsap.registerEffect({
     }
 });
 
+// Animacion de engranes--------------------------------------------
+gsap.registerEffect({
+    name: "girarDerecha",
+    effect: (targets, config) => {
+        return gsap.fromTo(targets, { 
+            rotation: 0,
+        }, {
+            duration:config.duration,
+            delay: config.delay,
+            rotation: 360,
+            repeat: -1,
+            ease: 'none'
+        });
+    }
+});
+
+gsap.registerEffect({
+    name: "girarIzquierda",
+    effect: (targets, config) => {
+        return gsap.fromTo(targets, { 
+            rotation: 0,
+        }, {
+            duration:config.duration,
+            delay: config.delay,
+            rotation: -360,
+            repeat: -1,
+            ease: 'none'
+        });
+    }
+});
+
 function animacionEntrada(elemento, direccion, tiempo, delay = 0){
 
     // Hacer visible el elemento
@@ -293,4 +324,18 @@ function animacionSalida(elemento, direccion, tiempo, delay = 0, remover=false){
             }
         }, retraso);
     }
+}
+
+function girarDerecha (elemento, tiempo, delay = 0){
+    gsap.effects.girarDerecha(elemento, {
+        delay: delay,
+        duration: tiempo
+    });
+}
+
+function girarIzquierda (elemento, tiempo, delay = 0){
+    gsap.effects.girarIzquierda(elemento, {
+        delay: delay,
+        duration: tiempo
+    });
 }

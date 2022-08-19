@@ -4,13 +4,14 @@ let audiosActivos = true;
 let delayAudio;
 let muteado = false;
 let noPagina;
-let totalPaginas = paginas.length;
+let totalPaginas;
 let paginasVistas = 0;
 let calificacionFinal = 0;
 let intentos = 1;
 
 // Iniciar App
 function iniciarAplicacion(){
+    totalPaginas = paginas.length;
     conectarLMS();
     calcularTiempo();
     verificarLocacion();
