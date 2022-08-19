@@ -44,7 +44,7 @@ $(window).on("load", function(){
     botonesTemario();
 
     // Modo desarrollador y avanzar con teclas
-    // modoDesarrollador();
+    modoDesarrollador();
     // moverTeclas();
 });
 

@@ -22,5 +22,7 @@ const paginas = [
     'pagina21.html',
     'pagina22.html',
     'pagina23.html',
-    'pagina24.html'
+    'pagina24.html',
+    'pagina25.html',
+    'pagina26.html',
 ]
