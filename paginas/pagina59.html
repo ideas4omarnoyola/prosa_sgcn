@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 59</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/jquery-ui.min.js"></script>
+    <script src="../js/librerias/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <script src="../js/movimientosRobot.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina59/titulo.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="pregunta" src="../img/pagina59/pregunta.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r1" src="../img/pagina59/r1.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r2" src="../img/pagina59/r2.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r3" src="../img/pagina59/r3.png" data-posX="694" data-posY="358"/>
+
+    
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;  
+        const titulo = $('#titulo');
+        const pregunta = $('#pregunta');
+        const r1 = $('#r1');
+        const r2 = $('#r2');
+        const r3 = $('#r3');
+        const respuestas = $('.respuestas');
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+            new Audio('../audios/s_bien.mp3'),
+            new Audio('../audios/s_mal.mp3')
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            aplicacion.reproducirAudio(audio[0], elegir, 2);
+            animacionEntrada(pregunta, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r1, 'default', 1, 2);
+            animacionEntrada(r2, 'default', 1, 2.5);
+            animacionEntrada(r3, 'default', 1, 3);
+        }
+
+        function elegir(){
+            respuestas.css('cursor', 'pointer');
+        }
+
+        r1.click(function(){
+            if(r1.css('cursor') == 'pointer'){
+                audio[2].play();
+            }
+        });
+
+        r2.click(function(){
+            if(r2.css('cursor') == 'pointer'){
+                aplicacion.reproducirAudio(audio[1], finalPagina, 0);
+            }
+        });
+
+        r3.click(function(){
+            if(r3.css('cursor') == 'pointer'){
+                audio[2].play();
+            }
+        });
+
+        function finalPagina(){
+            aplicacion.siguientePagina();
+        }
+
+    </script>
+</body>
+</html>

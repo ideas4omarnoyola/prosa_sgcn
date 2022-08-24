@@ -1,7 +1,7 @@
 const paginas = [];
 
 function generarPaginas(){
-    const totalPaginas = 70;
+    const totalPaginas = 67;
 
     for(let contador = 1; contador<=totalPaginas; contador++){
         let nombrePagina;

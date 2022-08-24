@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 66</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/jquery-ui.min.js"></script>
+    <script src="../js/librerias/jquery.ui.touch-punch.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <script src="../js/movimientosRobot.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+
+    <img class="elementos" id="titulo" src="../img/pagina66/titulo.png" data-posX="0" data-posY="0"/>
+
+    <img class="elementos" id="p1" src="../img/pagina66/p1.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r1_a" src="../img/pagina66/r1_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r1_b" src="../img/pagina66/r1_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r1_c" src="../img/pagina66/r1_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p2" src="../img/pagina66/p2.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r2_a" src="../img/pagina66/r2_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r2_b" src="../img/pagina66/r2_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r2_c" src="../img/pagina66/r2_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p3" src="../img/pagina66/p3.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r3_a" src="../img/pagina66/r3_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r3_b" src="../img/pagina66/r3_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r3_c" src="../img/pagina66/r3_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p4" src="../img/pagina66/p4.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r4_a" src="../img/pagina66/r4_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r4_b" src="../img/pagina66/r4_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r4_c" src="../img/pagina66/r4_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p5" src="../img/pagina66/p5.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r5_a" src="../img/pagina66/r5_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r5_b" src="../img/pagina66/r5_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r5_c" src="../img/pagina66/r5_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p6" src="../img/pagina66/p6.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r6_a" src="../img/pagina66/r6_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r6_b" src="../img/pagina66/r6_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r6_c" src="../img/pagina66/r6_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p7" src="../img/pagina66/p7.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r7_a" src="../img/pagina66/r7_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r7_b" src="../img/pagina66/r7_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r7_c" src="../img/pagina66/r7_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p8" src="../img/pagina66/p8.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r8_a" src="../img/pagina66/r8_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r8_b" src="../img/pagina66/r8_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r8_c" src="../img/pagina66/r8_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p9" src="../img/pagina66/p9.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r9_a" src="../img/pagina66/r9_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r9_b" src="../img/pagina66/r9_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r9_c" src="../img/pagina66/r9_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p10" src="../img/pagina66/p10.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r10_a" src="../img/pagina66/r10_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r10_b" src="../img/pagina66/r10_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r10_c" src="../img/pagina66/r10_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p11" src="../img/pagina66/p11.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r11_a" src="../img/pagina66/r11_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r11_b" src="../img/pagina66/r11_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r11_c" src="../img/pagina66/r11_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p12" src="../img/pagina66/p12.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r12_a" src="../img/pagina66/r12_a.png" data-posX="339" data-posY="351"/>
+    <img class="elementos respuestas" id="r12_b" src="../img/pagina66/r12_b.png" data-posX="551" data-posY="351"/>
+
+    <img class="elementos" id="p13" src="../img/pagina66/p13.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r13_a" src="../img/pagina66/r13_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r13_b" src="../img/pagina66/r13_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r13_c" src="../img/pagina66/r13_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p14" src="../img/pagina66/p14.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r14_a" src="../img/pagina66/r14_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r14_b" src="../img/pagina66/r14_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r14_c" src="../img/pagina66/r14_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p15" src="../img/pagina66/p15.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r15_a" src="../img/pagina66/r15_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r15_b" src="../img/pagina66/r15_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r15_c" src="../img/pagina66/r15_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p16" src="../img/pagina66/p16.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r16_a" src="../img/pagina66/r16_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r16_b" src="../img/pagina66/r16_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r16_c" src="../img/pagina66/r16_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p17" src="../img/pagina66/p17.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r17_a" src="../img/pagina66/r17_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r17_b" src="../img/pagina66/r17_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r17_c" src="../img/pagina66/r17_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p18" src="../img/pagina66/p18.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r18_a" src="../img/pagina66/r18_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r18_b" src="../img/pagina66/r18_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r18_c" src="../img/pagina66/r18_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p19" src="../img/pagina66/p19.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r19_a" src="../img/pagina66/r19_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r19_b" src="../img/pagina66/r19_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r19_c" src="../img/pagina66/r19_c.png" data-posX="694" data-posY="358"/>
+
+    <img class="elementos" id="p20" src="../img/pagina66/p20.png" data-posX="0" data-posY="0"/>
+    <img class="elementos respuestas" id="r20_a" src="../img/pagina66/r20_a.png" data-posX="44" data-posY="358"/>
+    <img class="elementos respuestas" id="r20_b" src="../img/pagina66/r20_b.png" data-posX="369" data-posY="358"/>
+    <img class="elementos respuestas" id="r20_c" src="../img/pagina66/r20_c.png" data-posX="694" data-posY="358"/>
+
+    <!-- Retroalimentacion -->
+    <img class="elementos" id="retroNegativa" src="../img/pagina66/retroNegativa.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="btnReintentar" src="../img/pagina66/btnReintentar.png" data-posX="438" data-posY="428"/>
+    
+    <svg class="elementos" id="robot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
+        <defs>
+          <style>
+            .cls-1 {
+              isolation: isolate;
+            }
+      
+            .cls-2 {
+              fill: none;
+            }
+      
+            .cls-3, .cls-4 {
+              fill: #51b2fb;
+            }
+      
+            .cls-3, .cls-32 {
+              opacity: 0.1;
+            }
+      
+            .cls-4 {
+              opacity: 0.2;
+            }
+      
+            .cls-5 {
+              fill: #e3ebfc;
+            }
+      
+            .cls-6 {
+              fill: #ccddfa;
+            }
+      
+            .cls-7 {
+              fill: #fafbff;
+            }
+      
+            .cls-8 {
+              fill: #80a7f6;
+            }
+      
+            .cls-9 {
+              fill: #9fbcfb;
+            }
+      
+            .cls-10 {
+              fill: #b8d0f9;
+            }
+      
+            .cls-11, .cls-29, .cls-31 {
+              fill: #207bff;
+            }
+      
+            .cls-11, .cls-37 {
+              opacity: 0.4;
+            }
+      
+            .cls-12 {
+              fill: #004bff;
+              opacity: 0.5;
+              mix-blend-mode: multiply;
+            }
+      
+            .cls-13 {
+              fill: #c5d8fa;
+            }
+      
+            .cls-14 {
+              fill: url(#_ÂÁ_Ï_ÌÌ_È_ËÂÌÚ_30);
+            }
+      
+            .cls-15 {
+              fill: #4aebff;
+            }
+      
+            .cls-16, .cls-30 {
+              fill: #fff;
+            }
+      
+            .cls-17 {
+              fill: #bef9ff;
+            }
+      
+            .cls-18 {
+              fill: url(#linear-gradient);
+            }
+      
+            .cls-19 {
+              fill: #ec1c24;
+            }
+      
+            .cls-20 {
+              fill: url(#linear-gradient-2);
+            }
+      
+            .cls-21 {
+              fill: url(#linear-gradient-3);
+            }
+      
+            .cls-22 {
+              fill: url(#linear-gradient-4);
+            }
+      
+            .cls-23 {
+              fill: url(#linear-gradient-5);
+            }
+      
+            .cls-24 {
+              fill: url(#linear-gradient-6);
+            }
+      
+            .cls-25 {
+              fill: url(#linear-gradient-7);
+            }
+      
+            .cls-26 {
+              fill: url(#_ÂÁ_Ï_ÌÌ_È_ËÂÌÚ_14);
+            }
+      
+            .cls-27 {
+              fill: url(#_ÂÁ_Ï_ÌÌ_È_ËÂÌÚ_18);
+            }
+      
+            .cls-28 {
+              fill: #4880f8;
+            }
+      
+            .cls-30 {
+              opacity: 0.8;
+            }
+      
+            .cls-31 {
+              opacity: 0.72;
+            }
+      
+            .cls-32, .cls-33, .cls-34, .cls-35 {
+              fill: #3ae6fb;
+            }
+      
+            .cls-33 {
+              opacity: 0.3;
+            }
+      
+            .cls-35 {
+              opacity: 0.7;
+            }
+      
+            .cls-36 {
+              fill: #93b4fb;
+            }
+      
+            .cls-37 {
+              mix-blend-mode: lighten;
+              fill: url(#radial-gradient);
+            }
+      
+            .cls-38 {
+              fill: #00ffda;
+            }
+      
+            .cls-39 {
+              fill: #7fd1ca;
+            }
+      
+            .cls-40 {
+              fill: #1e1e1e;
+            }
+          </style>
+          <radialGradient id="_ÂÁ_Ï_ÌÌ_È_ËÂÌÚ_30" data-name="¡ÂÁ˚ÏˇÌÌ˚È „‡‰ËÂÌÚ 30" cx="6065.15" cy="445.85" r="6.67" gradientTransform="translate(-5809.3)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#4aebff"/>
+            <stop offset="1" stop-color="#00709e"/>
+          </radialGradient>
+          <linearGradient id="linear-gradient" x1="221.6" y1="329.43" x2="221.6" y2="366.18" gradientTransform="translate(45.19)" gradientUnits="userSpaceOnUse">
+            <stop offset="0.02" stop-color="#dd2a21"/>
+            <stop offset="0.06" stop-color="#c8201b"/>
+            <stop offset="0.1" stop-color="#b71717"/>
+            <stop offset="0.15" stop-color="#ac1113"/>
+            <stop offset="0.22" stop-color="#a50e12"/>
+            <stop offset="0.43" stop-color="#a30d11"/>
+            <stop offset="0.79" stop-color="#6b0006"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-2" x1="210.92" y1="331.07" x2="210.92" y2="357.44" gradientTransform="translate(45.19)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ad1a27"/>
+            <stop offset="0.08" stop-color="#9e151f"/>
+            <stop offset="0.28" stop-color="#7d090e"/>
+            <stop offset="0.44" stop-color="#680304"/>
+            <stop offset="0.56" stop-color="#610000"/>
+            <stop offset="0.73" stop-color="#520000"/>
+            <stop offset="1" stop-color="#3f0000"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-3" x1="719.28" y1="344.65" x2="736.73" y2="344.65" gradientTransform="matrix(-1, 0, 0, 1, 1015.73, 0)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#be1349"/>
+            <stop offset="0.24" stop-color="#be124e"/>
+            <stop offset="0.25" stop-color="#be124e"/>
+            <stop offset="1" stop-color="#7a0025"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-4" x1="713.98" y1="353.41" x2="736.81" y2="353.41" gradientTransform="matrix(-1, 0, 0, 1, 1015.73, 0)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#282881"/>
+            <stop offset="0.27" stop-color="#26257d"/>
+            <stop offset="0.55" stop-color="#1f1b70"/>
+            <stop offset="0.84" stop-color="#150c5b"/>
+            <stop offset="1" stop-color="#0d004c"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-5" x1="719.38" y1="353.41" x2="736.73" y2="353.41" xlink:href="#linear-gradient-3"/>
+          <linearGradient id="linear-gradient-6" x1="722.89" y1="344.58" x2="744.69" y2="344.58" xlink:href="#linear-gradient-4"/>
+          <linearGradient id="linear-gradient-7" x1="227.57" y1="352.54" x2="227.57" y2="340.06" gradientTransform="translate(45.19)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ed2d24"/>
+            <stop offset="0.12" stop-color="#ed2824"/>
+            <stop offset="0.25" stop-color="#ec1c24"/>
+            <stop offset="1" stop-color="#74020d"/>
+          </linearGradient>
+          <linearGradient id="_ÂÁ_Ï_ÌÌ_È_ËÂÌÚ_14" data-name="¡ÂÁ˚ÏˇÌÌ˚È „‡‰ËÂÌÚ 14" x1="5976.5" y1="545.12" x2="6050.67" y2="545.12" gradientTransform="translate(-5784.65 13.43) rotate(-2.88)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#003a6b"/>
+            <stop offset="1" stop-color="#00204c"/>
+          </linearGradient>
+          <linearGradient id="_ÂÁ_Ï_ÌÌ_È_ËÂÌÚ_18" data-name="¡ÂÁ˚ÏˇÌÌ˚È „‡‰ËÂÌÚ 18" x1="6041.4" y1="224.41" x2="6078.98" y2="287.72" gradientTransform="translate(-5809.3)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#cbd7e1"/>
+            <stop offset="0.05" stop-color="#aec0d0"/>
+            <stop offset="0.15" stop-color="#7998b2"/>
+            <stop offset="0.26" stop-color="#4e7698"/>
+            <stop offset="0.35" stop-color="#2c5c85"/>
+            <stop offset="0.44" stop-color="#144976"/>
+            <stop offset="0.53" stop-color="#053e6e"/>
+            <stop offset="0.6" stop-color="#003a6b"/>
+            <stop offset="1" stop-color="#00204c"/>
+          </linearGradient>
+          <radialGradient id="radial-gradient" cx="5167.56" cy="535.02" r="14.12" gradientTransform="matrix(0.74, 0.02, -0.03, 0.82, -3645.94, -206.49)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#00ddde" stop-opacity="0.52"/>
+            <stop offset="0.09" stop-color="#2de6e7" stop-opacity="0.65"/>
+            <stop offset="0.2" stop-color="#63f1f1" stop-opacity="0.8"/>
+            <stop offset="0.3" stop-color="#8af8f9" stop-opacity="0.91"/>
+            <stop offset="0.38" stop-color="#a2fdfd" stop-opacity="0.98"/>
+            <stop offset="0.43" stop-color="#abffff"/>
+            <stop offset="0.46" stop-color="#9ffcfd"/>
+            <stop offset="0.51" stop-color="#7ff6f6"/>
+            <stop offset="0.58" stop-color="#4aebeb"/>
+            <stop offset="0.66" stop-color="#03dcdd"/>
+            <stop offset="0.66" stop-color="#00dbdc"/>
+            <stop offset="0.69" stop-color="#08dcdd" stop-opacity="0.97"/>
+            <stop offset="0.74" stop-color="#1fdfe0" stop-opacity="0.88"/>
+            <stop offset="0.8" stop-color="#44e5e5" stop-opacity="0.73"/>
+            <stop offset="0.87" stop-color="#78eced" stop-opacity="0.53"/>
+            <stop offset="0.94" stop-color="#baf5f6" stop-opacity="0.27"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <title>robot</title>
+        <g class="cls-1">
+          <g id="retroA">
+            <g id="robot">
+              <g id="fondo">
+                <rect class="cls-2" width="1024" height="620"/>
+              </g>
+              <g id="sombra">
+                <ellipse class="cls-3" cx="237.98" cy="484.12" rx="53.46" ry="12"/>
+                <path class="cls-4" d="M279.62,484.12c0,4.21-18.64,7.63-41.64,7.63s-41.64-3.42-41.64-7.63S215,476.48,238,476.48,279.62,479.9,279.62,484.12Z"/>
+                <path class="cls-4" d="M263.05,484.12c0,2.53-11.22,4.59-25.07,4.59s-25.07-2.06-25.07-4.59,11.22-4.6,25.07-4.6S263.05,481.58,263.05,484.12Z"/>
+              </g>
+              <g id="brazoIzquierdo">
+                <g>
+                  <path class="cls-5" d="M326.55,368.77c-7.81-37.14-23-53-26.52-56.26a3.08,3.08,0,0,0-1.9-.83c-2.64-.17-9.45.52-16.14,10.39-4.62,6.83-3,17.85-2.6,18.39,4.35,5.56,31.62,40.63,38.86,52.63C326.13,406.14,329.89,384.64,326.55,368.77Z"/>
+                  <path class="cls-6" d="M282,322.11a31,31,0,0,1,6.35-7.05c-.72.87-1.44,1.83-2.17,2.9-5.83,8.61-3,14.44-1,18.43,7.34,14.29,28.17,40.77,33.52,57.47l-.46-.73c-7.24-12-34.51-47.07-38.86-52.63C278.94,340,277.33,328.94,282,322.11Z"/>
+                  <path class="cls-7" d="M303.21,325.56c17.47,12.58,22.56,57.33,22.56,57.33s-11.56-30.8-20.34-43.65S297.24,321.27,303.21,325.56Z"/>
+                  <path class="cls-6" d="M313.89,385.9a48.88,48.88,0,0,1,.2,6.46c-.07.58-2.93,3.44-3,3.14-.21-2.7-2.64-16.74-5.23-20.3C305,373.94,313.8,383.3,313.89,385.9Z"/>
+                  <path class="cls-8" d="M305.59,375.64a.42.42,0,0,0,.34-.24c3.28-7.12,11.18-13.11,19.35-10.19a.43.43,0,1,0,.29-.82c-8.65-3.08-17,3.18-20.43,10.64a.44.44,0,0,0,.21.58A.5.5,0,0,0,305.59,375.64Z"/>
+                </g>
+                <path class="cls-9" d="M300.65,329c-1,11.6-5.87,20.65-10.85,20.22s-8.22-10.19-7.21-21.78,5.85-20.48,10.85-20.21C300.66,307.62,301.65,317.42,300.65,329Z"/>
+              </g>
+              <g id="torso">
+                <path class="cls-5" d="M189.64,302.25c-5.18-.34-23.43,18-17.94,35.74s36.61,77.06,43.65,97.81,11.27,25.87,21.29,27.76,25.16,2.57,42.71-34.08,20.25-77.8,21-97.35-1.24-27.32-8.08-29.55C276.37,297.38,189.64,302.25,189.64,302.25Z"/>
+                <path class="cls-7" d="M272.27,425.17c13.6-38.55,12-80,10.7-99.63-.84-13.05-2.38-20.75-5.38-24.88-14.5-.82-35.67-.46-53.62.11,9.6,25.31,23.78,67.94,26.14,111.85,1.57,29.29-2.47,43.6-8.07,50.93C251.17,461.72,262.14,453.85,272.27,425.17Z"/>
+                <path class="cls-10" d="M293.83,304.21c0,3.8-26.84,9.69-53.92,9.74s-53.95-5.77-54-9.56,26.85-4.15,53.94-4.2S293.83,300.41,293.83,304.21Z"/>
+                <path class="cls-11" d="M277.46,305c0,2.63-18.49,6.71-37.15,6.74s-37.16-4-37.16-6.61,18.49-2.87,37.15-2.9S277.45,302.36,277.46,305Z"/>
+                <path class="cls-12" d="M266.11,306.35c0,1-12.76,2.28-25.18,2.3s-24.33-1.22-24.33-2.22S228.49,305,240.92,305,266.1,305.34,266.11,306.35Z"/>
+                <path class="cls-13" d="M226.5,440.1c-2.88-15.54-7.17-66.35-17.39-102.2-5.12-18-17.16-30.65-28.83-26.64-8.28,2.86-11.55,17.12-8.58,26.73,5.5,17.77,36.61,77.06,43.65,97.81s11.27,25.87,21.29,27.76c5.16,1,11.68,1.61,19.18-3C245.67,462.16,231.26,465.82,226.5,440.1Z"/>
+                <path class="cls-14" d="M262.34,447.66a18.21,18.21,0,0,1-6.17,1,28.81,28.81,0,0,1-6.9-.5,2.77,2.77,0,0,1-2.41-2.57h0a2.5,2.5,0,0,1,2.41-2.56s5.31.59,6.61.58a47.3,47.3,0,0,0,6.7-.63c1.33,0,2.58.39,2.18,2.3A3.33,3.33,0,0,1,262.34,447.66Z"/>
+                <path class="cls-15" d="M261.49,447.38a19,19,0,0,1-5.33.72,29,29,0,0,1-6-.36c-1.11-.23-2.09-.82-2.09-1.83h0a2,2,0,0,1,2.09-1.82s4.59.42,5.71.41a50.19,50.19,0,0,0,5.8-.44c1.15,0,2.22.28,1.88,1.63C263.42,446.32,262.88,447,261.49,447.38Z"/>
+                <path class="cls-8" d="M254.68,435.94c-12.2,0-27.16-2.64-43.3-9.27a.43.43,0,0,1,.33-.8c30.07,12.36,55.94,10.79,67.25,4.1a.44.44,0,0,1,.59.15.45.45,0,0,1-.15.6C274,433.9,265.42,435.94,254.68,435.94Z"/>
+                <path class="cls-16" d="M254.36,435c-12.2,0-27.16-2.64-43.3-9.28a.43.43,0,0,1-.23-.56.43.43,0,0,1,.56-.24c30.07,12.36,55.94,10.79,67.25,4.11a.42.42,0,0,1,.59.15.43.43,0,0,1-.15.59C273.7,432.93,265.1,435,254.36,435Z"/>
+                <path class="cls-7" d="M298.12,312.27c2.31,47-4.47,69.22-4.47,69.22s6.48-35.5.5-69.82C293.34,307,297.76,304.93,298.12,312.27Z"/>
+                <path class="cls-16" d="M190.09,309s5.35,3.21,24.9,5,45.27,1.47,45.27,1.47-23.71,3.14-45.37.81S190.09,309,190.09,309Z"/>
+                <path class="cls-17" d="M259,444.35c-.94.08-2,.15-3.13.15s-5.71-.41-5.71-.41a2,2,0,0,0-.43,0l2.1,3.85a42,42,0,0,0,4.3.12,19.33,19.33,0,0,0,5-.63Z"/>
+                <g>
+                  <path class="cls-18" d="M254.33,344.46a16.59,16.59,0,0,1,10.35-15.37,15.85,15.85,0,0,1,1.85.23,15.29,15.29,0,0,1,12.71,14.56c0,.16,0,.33,0,.5v.17h0a9.47,9.47,0,0,0-9.47-9.45,9.32,9.32,0,0,0-3.09.52c.94-.34.9-.34-.06,0a9.11,9.11,0,0,0-12.23,8.82v.09c0,5.11,3.67,9.29,9,9.29a9.21,9.21,0,0,0,2.92-.47,9.48,9.48,0,0,0,13-8.64,15.14,15.14,0,0,1-12.62,14.87,17.24,17.24,0,0,1-1.93.24A16.59,16.59,0,0,1,254.33,344.46Z"/>
+                  <path class="cls-19" d="M260.31,344.58a9.48,9.48,0,0,0,6,8.79,9.21,9.21,0,0,1-2.92.47c-5.28,0-9-4.18-9-9.29v-.09a9.11,9.11,0,0,1,12.23-8.82c1-.35,1-.35.06,0A9.47,9.47,0,0,0,260.31,344.58Z"/>
+                  <path class="cls-20" d="M263.35,329c.45,0,.9,0,1.33.06a16.59,16.59,0,0,0,0,30.75c-.42,0-.84.05-1.26.05-9.21,0-15.9-6.95-15.9-15.43v-.08C247.54,335.89,254.15,329,263.35,329Z"/>
+                  <path class="cls-21" d="M279.25,344.58v0Z"/>
+                  <path class="cls-22" d="M266.53,353.28c1,.35,1,.36,0,0Z"/>
+                  <path class="cls-23" d="M266.53,353.28c1,.35,1,.36,0,0Z"/>
+                  <path class="cls-24" d="M269.78,354a9.53,9.53,0,0,1-3.51-.67l.26-.09c1,.36,1,.35,0,0a9.23,9.23,0,0,0,6.09-8.82v-.08a9.09,9.09,0,0,0-6-8.74h.05a9.32,9.32,0,0,1,3.09-.52,9.47,9.47,0,0,1,9.47,9.45v.17A9.47,9.47,0,0,1,269.78,354Z"/>
+                  <path class="cls-25" d="M269.78,354a9.53,9.53,0,0,1-3.51-.67l.26-.09c1,.36,1,.35,0,0a9.23,9.23,0,0,0,6.09-8.82v-.08a9.09,9.09,0,0,0-6-8.74h.05a9.32,9.32,0,0,1,3.09-.52,9.47,9.47,0,0,1,9.47,9.45v.17A9.47,9.47,0,0,1,269.78,354Z"/>
+                </g>
+              </g>
+              <g id="cabeza">
+                <g>
+                  <path class="cls-5" d="M193.75,287.8c12.32,15.87,50.05,12.84,60.56,11.84s28.32-2.83,34.73-22.18,3.21-48.87-14.43-64.22-64.83-12.84-80.86,7.84S189.48,282.29,193.75,287.8Z"/>
+                  <path class="cls-16" d="M197,225.3c.71-.25,15.28-11.57,41.65-13.83,9.08-.78,23.24,0,32.32,1.25-.9-.95-14-8.49-40.86-5.69C223.54,207.72,208.32,211.83,197,225.3Z"/>
+                  <path class="cls-7" d="M245,220.62c-8.49.13-17,.73-25,3.77l-.19.08c8.31,17.6,9,40.53,4.13,56.92a34.65,34.65,0,0,1-7.07,13.29c14.67,2.58,31.09,1.24,37.48.63,6.95-.66,17.09-1.69,25-7.91a40.47,40.47,0,0,0,2.3-6c4.93-16.61,4.17-39.92-4.46-57.61A136.65,136.65,0,0,0,245,220.62Z"/>
+                  <path class="cls-26" d="M214.26,236.24c4.89-6.66,18.24-8.4,35-9.39,21.57-1.29,28.87,2.61,31.07,5.11s6,14.88,5.21,26.92-1,15.66-5.91,18.65-19.26,5.93-28.5,6.15c-17.52.43-26.34-.42-32.2-3.87-3-1.75-6.8-11.22-7.4-22.9S211.72,239.69,214.26,236.24Z"/>
+                  <path class="cls-27" d="M248.61,228.7c-10.39.61-19.41,1.5-25.76,3.75,5.56,15.41,5.59,33.69,1.47,47.22l-.15.46c5.55,1.6,13.49,2,26.23,1.68,8.86-.21,22.59-2.95,27.34-5.74a8.55,8.55,0,0,0,3.73-3.89,80.6,80.6,0,0,0-2.75-38.31,3.31,3.31,0,0,0-.3-.39C276.3,231.15,269.3,227.5,248.61,228.7Z"/>
+                  <path class="cls-9" d="M202.92,247.31c-.29,6.54-3.95,11.69-8.16,11.5s-7.4-5.64-7.11-12.18,3.94-11.69,8.16-11.51S203.21,240.77,202.92,247.31Z"/>
+                  <path class="cls-28" d="M199.58,246.81c-.21,4.6-2.44,8.22-5,8.11s-4.46-3.93-4.25-8.52,2.44-8.22,5-8.1S199.78,242.22,199.58,246.81Z"/>
+                  <path class="cls-29" d="M199.65,247.16l-.43,0,.43,0a16.15,16.15,0,0,0-1.92-8.71c-1.42-2.43-3.41-3.82-5.6-3.92-4.43-.2-8.31,5.15-8.61,11.91s3.07,12.44,7.52,12.64h.24C195.62,259.08,199.35,253.81,199.65,247.16Zm-7.56-11.77c1.89.09,3.62,1.33,4.89,3.5a15.16,15.16,0,0,1,1.8,8.23c-.27,6.29-3.74,11.25-7.7,11.09s-7-5.44-6.7-11.73,3.62-11.09,7.51-11.09Z"/>
+                  <path class="cls-7" d="M191.56,262.47l3.09.1s1.32,12.85,5,20.4,9,10,9,10-7.92-2.57-12.67-12.35C192.55,273.54,191.56,262.47,191.56,262.47Z"/>
+                  <path class="cls-30" d="M217.16,237.22v0a1.64,1.64,0,0,0,2.36.56c1.51-1,3.8-2.57,5.12-3.28,2.08-1.14,12.38-4.94,12.38-4.94s-10.32.21-19.09,5A2,2,0,0,0,217.16,237.22Z"/>
+                </g>
+                <path class="cls-31" d="M209.07,245.8c0,2-.94,3.67-2.1,3.67s-2.11-1.64-2.11-3.67.94-3.67,2.11-3.67S209.07,243.77,209.07,245.8Z"/>
+              </g>
+              <g id="ojos">
+                <g>
+                  <rect class="cls-32" x="234.1" y="240.81" width="14.88" height="19.44" rx="3.93"/>
+                  <rect class="cls-32" x="235.66" y="242.9" width="11.76" height="15.26" rx="3.68"/>
+                  <rect class="cls-33" x="237.64" y="244.86" width="8.16" height="11.88" rx="2.44"/>
+                  <path class="cls-34" d="M244.93,249.44h-6.7a.32.32,0,0,1-.32-.32.32.32,0,0,1,.32-.33h6.7a.33.33,0,0,1,.33.33A.32.32,0,0,1,244.93,249.44Z"/>
+                  <path class="cls-34" d="M244.93,250.86h-6.7a.32.32,0,0,1-.32-.33.32.32,0,0,1,.32-.32h6.7a.32.32,0,0,1,.33.32A.33.33,0,0,1,244.93,250.86Z"/>
+                  <path class="cls-34" d="M244.93,252.32h-6.7a.32.32,0,0,1,0-.64h6.7a.32.32,0,1,1,0,.64Z"/>
+                  <path class="cls-34" d="M244.08,246.73h-5a.33.33,0,0,1-.32-.33.32.32,0,0,1,.32-.32h5a.32.32,0,0,1,.32.32A.32.32,0,0,1,244.08,246.73Z"/>
+                  <path class="cls-34" d="M244.93,248.19h-6.7a.32.32,0,0,1,0-.64h6.7a.32.32,0,1,1,0,.64Z"/>
+                  <path class="cls-34" d="M244.93,254.07h-6.7a.32.32,0,0,1-.32-.33.32.32,0,0,1,.32-.32h6.7a.32.32,0,0,1,.33.32A.33.33,0,0,1,244.93,254.07Z"/>
+                  <path class="cls-34" d="M244.93,255.48h-6.7a.32.32,0,0,1-.32-.32.32.32,0,0,1,.32-.33h6.7a.33.33,0,0,1,.33.33A.32.32,0,0,1,244.93,255.48Z"/>
+                </g>
+                <g>
+                  <rect class="cls-32" x="260.82" y="240.46" width="14.88" height="19.44" rx="3.93"/>
+                  <rect class="cls-32" x="262.38" y="242.55" width="11.76" height="15.26" rx="3.68"/>
+                  <rect class="cls-33" x="264.36" y="244.51" width="8.16" height="11.88" rx="2.44"/>
+                  <path class="cls-34" d="M271.65,249.09H265a.33.33,0,1,1,0-.65h6.7a.33.33,0,0,1,0,.65Z"/>
+                  <path class="cls-34" d="M271.65,250.5H265a.32.32,0,1,1,0-.64h6.7a.32.32,0,0,1,0,.64Z"/>
+                  <path class="cls-34" d="M271.65,252H265a.32.32,0,0,1-.33-.32.33.33,0,0,1,.33-.33h6.7a.32.32,0,0,1,.32.33A.32.32,0,0,1,271.65,252Z"/>
+                  <path class="cls-34" d="M270.8,246.37h-5a.32.32,0,0,1,0-.64h5a.32.32,0,1,1,0,.64Z"/>
+                  <path class="cls-34" d="M271.65,247.84H265a.32.32,0,0,1-.33-.32.33.33,0,0,1,.33-.33h6.7a.32.32,0,0,1,.32.33A.32.32,0,0,1,271.65,247.84Z"/>
+                  <path class="cls-34" d="M271.65,253.72H265a.33.33,0,0,1-.33-.33.32.32,0,0,1,.33-.32h6.7a.32.32,0,0,1,.32.32A.32.32,0,0,1,271.65,253.72Z"/>
+                  <path class="cls-34" d="M271.65,255.13H265a.32.32,0,0,1-.33-.32.33.33,0,0,1,.33-.33h6.7a.32.32,0,0,1,.32.33A.32.32,0,0,1,271.65,255.13Z"/>
+                </g>
+              </g>
+              <path id="boca" class="cls-35" d="M244.64,270.22c6.72.85,18.76,1.52,18.76,1.52s-10.66,1.08-17.6-.12S237.42,269.3,244.64,270.22Z"/>
+              <g id="brazoDerecho">
+                <path class="cls-36" d="M200.57,337.23c3.72,13,.77,25.19-6.59,27.3s-16.34-6.68-20.06-19.65-.78-25.18,6.58-27.3S196.84,324.27,200.57,337.23Z"/>
+                <path class="cls-29" d="M191.63,361.33a.48.48,0,0,1-.49-.44.48.48,0,0,1,.44-.5,5.38,5.38,0,0,0,4.33-3c3.06-5.26,2.47-15.18-1.37-23.08-4.59-9.44-11.92-13.2-16.09-11.28a.47.47,0,1,1-.39-.85c5.23-2.42,13,2.84,17.32,11.72,4,8.16,4.54,18.46,1.33,24a6.34,6.34,0,0,1-5.07,3.49Z"/>
+                <g>
+                  <path class="cls-5" d="M151.34,385.59c3.09-37.83,16.14-55.44,19.26-59.15a3.12,3.12,0,0,1,1.78-1.06c2.6-.5,9.44-.67,17.31,8.29,5.44,6.19,5.24,17.33,4.89,17.91-3.61,6.07-26.27,44.28-32,57.09C156.45,422.61,150,401.75,151.34,385.59Z"/>
+                  <path class="cls-6" d="M189.74,333.7a31,31,0,0,0-7.18-6.2c.82.78,1.66,1.64,2.51,2.61,6.86,7.81,4.81,13.95,3.28,18.16-5.48,15.09-22.82,44-26,61.22l.37-.78c5.68-12.82,28.33-51,31.94-57.09C195,351,195.18,339.89,189.74,333.7Z"/>
+                  <path class="cls-7" d="M169.09,339.79c-15.76,14.68-15.2,59.71-15.2,59.71s7.6-32,14.7-45.86S174.46,334.79,169.09,339.79Z"/>
+                  <path class="cls-6" d="M166.05,401a49.52,49.52,0,0,0,.61,6.43c.15.58,3.35,3.06,3.33,2.75-.12-2.7.53-16.94,2.65-20.8C173.39,388,165.82,398.4,166.05,401Z"/>
+                  <path class="cls-8" d="M173,389.78a.43.43,0,0,1-.36-.21c-4.15-6.64-12.74-11.59-20.48-7.68a.43.43,0,1,1-.39-.77c8.19-4.15,17.25,1,21.6,8a.42.42,0,0,1-.14.59A.39.39,0,0,1,173,389.78Z"/>
+                </g>
+                <g>
+                  <path class="cls-37" d="M178.23,350.5c-.19,6.41-5,11.47-10.8,11.29s-10.3-5.51-10.11-11.92,5-11.47,10.81-11.29S178.43,344.09,178.23,350.5Z"/>
+                  <g>
+                    <path class="cls-38" d="M160.62,351.18c-.14,2.15,1.07,4.41,2.31,6.13a21.56,21.56,0,0,0,2.52,2.89s6.66-1.71,8.5-5.53c.38-.81,2.13-5.82,2.13-5.82s.52-1.21-.46-1.77a29.69,29.69,0,0,1-3.38-1.91,9.76,9.76,0,0,0-2.25-1.45c-.64-.23-.93-.1-2.1,0a38.29,38.29,0,0,1-4-.1c-1.18,0-1.32,1.31-1.32,1.31S160.69,350.27,160.62,351.18Z"/>
+                    <path class="cls-39" d="M162.6,344.92s-1.91,5.35-2,6.26c-.28,4.31,4.82,9,4.82,9h0s6.67-1.71,8.5-5.54c.38-.8,2.13-5.81,2.13-5.81s.52-1.22-.46-1.77a30.58,30.58,0,0,1-3.38-1.91,9.55,9.55,0,0,0-2.26-1.45c-.63-.23-.92-.1-2.09,0a33.65,33.65,0,0,1-4-.1C162.74,343.57,162.6,344.92,162.6,344.92Zm1.05-.22,1,0a11.52,11.52,0,0,0,3.06,0c2.12-.4,2.77.67,3.78,1.4a20.25,20.25,0,0,0,2.6,1.51l.84.44a1.18,1.18,0,0,1,0,.25.15.15,0,0,0,0,.07c-.67,1.92-1.83,5.16-2.09,5.71-.79,1.66-2.8,2.88-4.35,3.62a21,21,0,0,1-2.58,1,21.7,21.7,0,0,1-1.79-2.16c-1-1.39-2.2-3.7-2.07-5.56a39.09,39.09,0,0,1,1.6-6.06Z"/>
+                    <path class="cls-40" d="M160.62,351.18c-.16,2.5,1.49,5.14,2.91,6.9-1.3-1.74-2.6-4.08-2.46-6.32a65.52,65.52,0,0,1,2-6.26s.14-1.35,1.31-1.32a33.59,33.59,0,0,0,4,.1c1.17-.08,1.45-.21,2.09,0a9.35,9.35,0,0,1,2.25,1.45,30.65,30.65,0,0,0,3.39,1.91l.08.06a1.07,1.07,0,0,0-.53-.64,29.69,29.69,0,0,1-3.38-1.91,9.76,9.76,0,0,0-2.25-1.45c-.64-.23-.93-.1-2.1,0a33.42,33.42,0,0,1-4-.1c-1.18,0-1.32,1.32-1.32,1.32S160.69,350.27,160.62,351.18Z"/>
+                    <path class="cls-39" d="M167.27,351.29a.45.45,0,0,0,.11.4l-.09.31a.08.08,0,0,0,.06.1l.25.07a.09.09,0,0,0,.11-.06l.08-.31a.44.44,0,0,0,.29-.3.42.42,0,1,0-.81-.21Z"/>
+                    <path class="cls-39" d="M167.28,349.15l-.16.61,1.84.49.17-.61a1,1,0,1,0-1.85-.49Z"/>
+                    <path class="cls-39" d="M163.93,346.41s-1.16,3.95-1.21,4.62c-.25,3.2,3.32,6.9,3.32,6.9h0s4.73-1.33,6.07-4.2c.28-.6,1.57-4.35,1.57-4.35s.39-.91-.3-1.31a18.79,18.79,0,0,1-2.38-1.39c-.41-.3-.78-.55-1.08-.74a5.82,5.82,0,0,0-.68-.37h0a2.6,2.6,0,0,0-1.39-.11,19.77,19.77,0,0,1-2.8,0C164.21,345.42,163.93,346.41,163.93,346.41Zm1.7,3.5a.52.52,0,0,1,.63-.37l.13,0,.17-.61a1.7,1.7,0,1,1,3.29.87l-.16.61.13,0a.51.51,0,0,1,.37.63l-.63,2.4a.53.53,0,0,1-.64.37l-3.56-.94a.52.52,0,0,1-.36-.64Z"/>
+                    <path class="cls-40" d="M162.72,351c-.18,2.3,1.61,4.86,2.63,6.12-1-1.37-2.34-3.55-2.18-5.54.05-.67,1.21-4.62,1.21-4.62s.28-1,1.1-1a21.39,21.39,0,0,0,2.8,0,2.6,2.6,0,0,1,1.39.11h0a5.92,5.92,0,0,1,.67.37c.31.19.68.44,1.09.74a17.15,17.15,0,0,0,2.32,1.35.78.78,0,0,0-.39-.54,20.08,20.08,0,0,1-2.38-1.39c-.41-.3-.78-.55-1.08-.74a5.82,5.82,0,0,0-.68-.37h0a2.6,2.6,0,0,0-1.39-.11,21.21,21.21,0,0,1-2.79,0c-.83,0-1.11,1-1.11,1S162.77,350.36,162.72,351Z"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+    </svg>
+    <img class="elementos" id="retroPositiva" src="../img/pagina66/retroPositiva.png" data-posX="0" data-posY="0"/>
+
+    <div class="elementos" id="promedio"></div>
+    
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;  
+        const titulo = $('#titulo');
+        const p1 = $('#p1');
+        const r1_a = $('#r1_a');
+        const r1_b = $('#r1_b');
+        const r1_c = $('#r1_c');
+        const p2 = $('#p2');
+        const r2_a = $('#r2_a');
+        const r2_b = $('#r2_b');
+        const r2_c = $('#r2_c');
+        const p3 = $('#p3');
+        const r3_a = $('#r3_a');
+        const r3_b = $('#r3_b');
+        const r3_c = $('#r3_c');
+        const p4 = $('#p4');
+        const r4_a = $('#r4_a');
+        const r4_b = $('#r4_b');
+        const r4_c = $('#r4_c');
+        const p5 = $('#p5');
+        const r5_a = $('#r5_a');
+        const r5_b = $('#r5_b');
+        const r5_c = $('#r5_c');
+        const p6 = $('#p6');
+        const r6_a = $('#r6_a');
+        const r6_b = $('#r6_b');
+        const r6_c = $('#r6_c');
+        const p7 = $('#p7');
+        const r7_a = $('#r7_a');
+        const r7_b = $('#r7_b');
+        const r7_c = $('#r7_c');
+        const p8 = $('#p8');
+        const r8_a = $('#r8_a');
+        const r8_b = $('#r8_b');
+        const r8_c = $('#r8_c');
+        const p9 = $('#p9');
+        const r9_a = $('#r9_a');
+        const r9_b = $('#r9_b');
+        const r9_c = $('#r9_c');
+        const p10 = $('#p10');
+        const r10_a = $('#r10_a');
+        const r10_b = $('#r10_b');
+        const r10_c = $('#r10_c');
+        const p11 = $('#p11');
+        const r11_a = $('#r11_a');
+        const r11_b = $('#r11_b');
+        const r11_c = $('#r11_c');
+        const p12 = $('#p12');
+        const r12_a = $('#r12_a');
+        const r12_b = $('#r12_b');
+        const p13 = $('#p13');
+        const r13_a = $('#r13_a');
+        const r13_b = $('#r13_b');
+        const r13_c = $('#r13_c');
+        const p14 = $('#p14');
+        const r14_a = $('#r14_a');
+        const r14_b = $('#r14_b');
+        const r14_c = $('#r14_c');
+        const p15 = $('#p15');
+        const r15_a = $('#r15_a');
+        const r15_b = $('#r15_b');
+        const r15_c = $('#r15_c');
+        const p16 = $('#p16');
+        const r16_a = $('#r16_a');
+        const r16_b = $('#r16_b');
+        const r16_c = $('#r16_c');
+        const p17 = $('#p17');
+        const r17_a = $('#r17_a');
+        const r17_b = $('#r17_b');
+        const r17_c = $('#r17_c');
+        const p18 = $('#p18');
+        const r18_a = $('#r18_a');
+        const r18_b = $('#r18_b');
+        const r18_c = $('#r18_c');
+        const p19 = $('#p19');
+        const r19_a = $('#r19_a');
+        const r19_b = $('#r19_b');
+        const r19_c = $('#r19_c');
+        const p20 = $('#p20');
+        const r20_a = $('#r20_a');
+        const r20_b = $('#r20_b');
+        const r20_c = $('#r20_c');
+        const retroNegativa = $('#retroNegativa');
+        const btnReintentar = $('#btnReintentar');
+        const retroPositiva = $('#retroPositiva');
+        const robot = $('#robot');
+        const promedio = $('#promedio');
+
+
+        const respuestas = $('.respuestas');
+
+        let aciertos = 0;
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/s_bien.mp3'),
+            new Audio('../audios/s_mal.mp3'),
+            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
+            animacionEntrada(p1, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r1_a, 'default', 1, 2);
+            animacionEntrada(r1_b, 'default', 1, 2.5);
+            animacionEntrada(r1_c, 'default', 1, 3);
+
+            respuestas.css('cursor', 'pointer');
+        }
+
+        function pregunta2(){
+            animacionSalida(p1, 'default', 1);
+            animacionSalida(r1_a, 'default', 1);
+            animacionSalida(r1_b, 'default', 1);
+            animacionSalida(r1_c, 'default', 1);
+
+            animacionEntrada(p2, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r2_a, 'default', 1, 2);
+            animacionEntrada(r2_b, 'default', 1, 2.5);
+            animacionEntrada(r2_c, 'default', 1, 3);
+        }
+
+        function pregunta3(){
+            animacionSalida(p2, 'default', 1);
+            animacionSalida(r2_a, 'default', 1);
+            animacionSalida(r2_b, 'default', 1);
+            animacionSalida(r2_c, 'default', 1);
+
+            animacionEntrada(p3, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r3_a, 'default', 1, 2);
+            animacionEntrada(r3_b, 'default', 1, 2.5);
+            animacionEntrada(r3_c, 'default', 1, 3);
+        }
+
+        function pregunta4(){
+            animacionSalida(p3, 'default', 1);
+            animacionSalida(r3_a, 'default', 1);
+            animacionSalida(r3_b, 'default', 1);
+            animacionSalida(r3_c, 'default', 1);
+
+            animacionEntrada(p4, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r4_a, 'default', 1, 2);
+            animacionEntrada(r4_b, 'default', 1, 2.5);
+            animacionEntrada(r4_c, 'default', 1, 3);
+        }
+
+        function pregunta5(){
+            animacionSalida(p4, 'default', 1);
+            animacionSalida(r4_a, 'default', 1);
+            animacionSalida(r4_b, 'default', 1);
+            animacionSalida(r4_c, 'default', 1);
+
+            animacionEntrada(p5, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r5_a, 'default', 1, 2);
+            animacionEntrada(r5_b, 'default', 1, 2.5);
+            animacionEntrada(r5_c, 'default', 1, 3);
+        }
+
+        function pregunta6(){
+            animacionSalida(p5, 'default', 1);
+            animacionSalida(r5_a, 'default', 1);
+            animacionSalida(r5_b, 'default', 1);
+            animacionSalida(r5_c, 'default', 1);
+
+            animacionEntrada(p6, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r6_a, 'default', 1, 2);
+            animacionEntrada(r6_b, 'default', 1, 2.5);
+            animacionEntrada(r6_c, 'default', 1, 3);
+        }
+
+        function pregunta7(){
+            animacionSalida(p6, 'default', 1);
+            animacionSalida(r6_a, 'default', 1);
+            animacionSalida(r6_b, 'default', 1);
+            animacionSalida(r6_c, 'default', 1);
+
+            animacionEntrada(p7, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r7_a, 'default', 1, 2);
+            animacionEntrada(r7_b, 'default', 1, 2.5);
+            animacionEntrada(r7_c, 'default', 1, 3);
+        }
+
+        function pregunta8(){
+            animacionSalida(p7, 'default', 1);
+            animacionSalida(r7_a, 'default', 1);
+            animacionSalida(r7_b, 'default', 1);
+            animacionSalida(r7_c, 'default', 1);
+
+            animacionEntrada(p8, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r8_a, 'default', 1, 2);
+            animacionEntrada(r8_b, 'default', 1, 2.5);
+            animacionEntrada(r8_c, 'default', 1, 3);
+        }
+
+        function pregunta9(){
+            animacionSalida(p8, 'default', 1);
+            animacionSalida(r8_a, 'default', 1);
+            animacionSalida(r8_b, 'default', 1);
+            animacionSalida(r8_c, 'default', 1);
+
+            animacionEntrada(p9, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r9_a, 'default', 1, 2);
+            animacionEntrada(r9_b, 'default', 1, 2.5);
+            animacionEntrada(r9_c, 'default', 1, 3);
+        }
+
+        function pregunta10(){
+            animacionSalida(p9, 'default', 1);
+            animacionSalida(r9_a, 'default', 1);
+            animacionSalida(r9_b, 'default', 1);
+            animacionSalida(r9_c, 'default', 1);
+
+            animacionEntrada(p10, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r10_a, 'default', 1, 2);
+            animacionEntrada(r10_b, 'default', 1, 2.5);
+            animacionEntrada(r10_c, 'default', 1, 3);
+        }
+
+        function pregunta11(){
+            animacionSalida(p10, 'default', 1);
+            animacionSalida(r10_a, 'default', 1);
+            animacionSalida(r10_b, 'default', 1);
+            animacionSalida(r10_c, 'default', 1);
+
+            animacionEntrada(p11, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r11_a, 'default', 1, 2);
+            animacionEntrada(r11_b, 'default', 1, 2.5);
+            animacionEntrada(r11_c, 'default', 1, 3);
+        }
+
+        function pregunta12(){
+            animacionSalida(p11, 'default', 1);
+            animacionSalida(r11_a, 'default', 1);
+            animacionSalida(r11_b, 'default', 1);
+            animacionSalida(r11_c, 'default', 1);
+
+            animacionEntrada(p12, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r12_a, 'default', 1, 2);
+            animacionEntrada(r12_b, 'default', 1, 2.5);
+        }
+
+        function pregunta13(){
+            animacionSalida(p12, 'default', 1);
+            animacionSalida(r12_a, 'default', 1);
+            animacionSalida(r12_b, 'default', 1);
+
+            animacionEntrada(p13, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r13_a, 'default', 1, 2);
+            animacionEntrada(r13_b, 'default', 1, 2.5);
+            animacionEntrada(r13_c, 'default', 1, 3);
+        }
+
+        function pregunta14(){
+            animacionSalida(p13, 'default', 1);
+            animacionSalida(r13_a, 'default', 1);
+            animacionSalida(r13_b, 'default', 1);
+            animacionSalida(r13_c, 'default', 1);
+
+            animacionEntrada(p14, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r14_a, 'default', 1, 2);
+            animacionEntrada(r14_b, 'default', 1, 2.5);
+            animacionEntrada(r14_c, 'default', 1, 3);
+        }
+
+        function pregunta15(){
+            animacionSalida(p14, 'default', 1);
+            animacionSalida(r14_a, 'default', 1);
+            animacionSalida(r14_b, 'default', 1);
+            animacionSalida(r14_c, 'default', 1);
+
+            animacionEntrada(p15, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r15_a, 'default', 1, 2);
+            animacionEntrada(r15_b, 'default', 1, 2.5);
+            animacionEntrada(r15_c, 'default', 1, 3);
+        }
+
+        function pregunta16(){
+            animacionSalida(p15, 'default', 1);
+            animacionSalida(r15_a, 'default', 1);
+            animacionSalida(r15_b, 'default', 1);
+            animacionSalida(r15_c, 'default', 1);
+
+            animacionEntrada(p16, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r16_a, 'default', 1, 2);
+            animacionEntrada(r16_b, 'default', 1, 2.5);
+            animacionEntrada(r16_c, 'default', 1, 3);
+        }
+
+        function pregunta17(){
+            animacionSalida(p16, 'default', 1);
+            animacionSalida(r16_a, 'default', 1);
+            animacionSalida(r16_b, 'default', 1);
+            animacionSalida(r16_c, 'default', 1);
+
+            animacionEntrada(p17, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r17_a, 'default', 1, 2);
+            animacionEntrada(r17_b, 'default', 1, 2.5);
+            animacionEntrada(r17_c, 'default', 1, 3);
+        }
+
+        function pregunta18(){
+            animacionSalida(p17, 'default', 1);
+            animacionSalida(r17_a, 'default', 1);
+            animacionSalida(r17_b, 'default', 1);
+            animacionSalida(r17_c, 'default', 1);
+
+            animacionEntrada(p18, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r18_a, 'default', 1, 2);
+            animacionEntrada(r18_b, 'default', 1, 2.5);
+            animacionEntrada(r18_c, 'default', 1, 3);
+        }
+
+        function pregunta19(){
+            animacionSalida(p18, 'default', 1);
+            animacionSalida(r18_a, 'default', 1);
+            animacionSalida(r18_b, 'default', 1);
+            animacionSalida(r18_c, 'default', 1);
+
+            animacionEntrada(p19, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r19_a, 'default', 1, 2);
+            animacionEntrada(r19_b, 'default', 1, 2.5);
+            animacionEntrada(r19_c, 'default', 1, 3);
+        }
+
+        function pregunta20(){
+            animacionSalida(p19, 'default', 1);
+            animacionSalida(r19_a, 'default', 1);
+            animacionSalida(r19_b, 'default', 1);
+            animacionSalida(r19_c, 'default', 1);
+
+            animacionEntrada(p20, 'derecha-izquierda', 1, 1);
+            animacionEntrada(r20_a, 'default', 1, 2);
+            animacionEntrada(r20_b, 'default', 1, 2.5);
+            animacionEntrada(r20_c, 'default', 1, 3);
+        }
+
+        function salidaPreguntas(){
+            animacionSalida(p20, 'default', 1);
+            animacionSalida(r20_a, 'default', 1);
+            animacionSalida(r20_b, 'default', 1);
+            animacionSalida(r20_c, 'default', 1);
+
+            retroalimentacion();
+        }
+
+        // Retroalimentacion---------------------------------------------------
+        function retroalimentacion(){
+            const totalCalificacion = (aciertos / 2) * 10;
+            console.log(totalCalificacion);
+
+            const intentos = aplicacion.verIntento();
+            
+            if(totalCalificacion >= 80 && intentos <= 2){
+                aplicacion.guardarCalificacion(totalCalificacion);
+                retroP(totalCalificacion);
+            }
+            else if(totalCalificacion < 80 && intentos == 1){    
+                aplicacion.siguienteIntento();
+                aplicacion.guardarCalificacion(totalCalificacion);
+                retroN(totalCalificacion);
+            }
+            else{
+                aplicacion.siguienteIntento();
+                retroFinal(totalCalificacion);
+            } 
+        }
+
+        function retroP(calificacion){
+            promedio.html(calificacion);
+            promedio.css({
+                'fontSize': '32px',
+                'color': 'white', 
+                'top': '355px',
+                'left': '590px'
+            });
+
+            aplicacion.reproducirAudio(audio[2], finalCurso, 2);
+            animacionEntrada(retroPositiva, 'default', 1, 1);
+            animacionEntrada(promedio, 'default', 1, 1);
+            animacionEntrada(robot, 'default', 1, 1);
+
+            setTimeout(()=>{
+                flotar(robot, 'i');
+                hablar(robot, 'i');
+            }, 2000);
+        }
+
+        function retroN(calificacion){
+            promedio.html(calificacion);
+            promedio.css({
+                'fontSize': '32px',
+                'color': 'white', 
+                'top': '225px',
+                'left': '485px'
+            });
+            aplicacion.reproducirAudio(audio[3], reintentar, 1);
+            animacionEntrada(promedio, 'default', 1, 1);
+            animacionEntrada(retroNegativa, 'default', 1, 1);
+        }
+
+        function retroFinal(calificacion){
+            promedio.html(calificacion);
+            promedio.css({
+                'fontSize': '32px',
+                'color': 'white', 
+                'top': '225px',
+                'left': '485px'
+            });
+            animacionEntrada(promedio, 'default', 1, 1);
+            animacionEntrada(retroNegativa, 'default', 1, 1);
+        }
+
+        function finalCurso(){
+            pararHablar();
+            aplicacion.terminaPantalla();
+        }
+
+        function reintentar(){
+            parpadear(btnReintentar);
+        }
+
+        btnReintentar.click(function(){
+            aplicacion.recargarPagina();
+        });
+
+        //Respuestas 1-----------------------------------------------------------
+        r1_a.click(function(){
+            if(r1_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta2();
+            }
+        });
+
+        r1_b.click(function(){
+            if(r1_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta2();
+            }
+        });
+
+        r1_c.click(function(){
+            if(r1_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta2();
+            }
+        });
+        
+        //Respuestas 2-----------------------------------------------------------
+        r2_a.click(function(){
+            if(r2_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta3();
+            }
+        });
+
+        r2_b.click(function(){
+            if(r2_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta3();
+            }
+        });
+
+        r2_c.click(function(){
+            if(r2_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta3();
+            }
+        });
+        
+        //Respuestas 3-----------------------------------------------------------
+        r3_a.click(function(){
+            if(r3_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta4();
+            }
+        });
+
+        r3_b.click(function(){
+            if(r3_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta4();
+            }
+        });
+
+        r3_c.click(function(){
+            if(r3_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta4();
+            }
+        });
+        
+        //Respuestas 4-----------------------------------------------------------
+        r4_a.click(function(){
+            if(r4_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++
+                pregunta5();
+            }
+        });
+
+        r4_b.click(function(){
+            if(r4_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta5();
+            }
+        });
+
+        r4_c.click(function(){
+            if(r4_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta5();
+            }
+        });
+        
+        //Respuestas 5-----------------------------------------------------------
+        r5_a.click(function(){
+            if(r5_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta6();
+            }
+        });
+
+        r5_b.click(function(){
+            if(r5_b.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta6();
+            }
+        });
+
+        r5_c.click(function(){
+            if(r5_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta6();
+            }
+        });
+        
+        //Respuestas 6-----------------------------------------------------------
+        r6_a.click(function(){
+            if(r6_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta7();
+            }
+        });
+
+        r6_b.click(function(){
+            if(r6_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta7();
+            }
+        });
+
+        r6_c.click(function(){
+            if(r6_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta7();
+            }
+        });
+        
+        //Respuestas 7-----------------------------------------------------------
+        r7_a.click(function(){
+            if(r7_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta8();
+            }
+        });
+
+        r7_b.click(function(){
+            if(r7_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta8();
+            }
+        });
+
+        r7_c.click(function(){
+            if(r7_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta8();
+            }
+        });
+        
+        //Respuestas 8-----------------------------------------------------------
+        r8_a.click(function(){
+            if(r8_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta9();
+            }
+        });
+
+        r8_b.click(function(){
+            if(r8_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta9();
+            }
+        });
+
+        r8_c.click(function(){
+            if(r8_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta9();
+            }
+        });
+        
+        //Respuestas 9-----------------------------------------------------------
+        r9_a.click(function(){
+            if(r9_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta10();
+            }
+        });
+
+        r9_b.click(function(){
+            if(r9_b.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta10();
+            }
+        });
+
+        r9_c.click(function(){
+            if(r9_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta10();
+            }
+        });
+        
+        //Respuestas 10-----------------------------------------------------------
+        r10_a.click(function(){
+            if(r10_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta11();
+            }
+        });
+
+        r10_b.click(function(){
+            if(r10_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta11();
+            }
+        });
+
+        r10_c.click(function(){
+            if(r10_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta11();
+            }
+        });
+        
+        //Respuestas 11-----------------------------------------------------------
+        r11_a.click(function(){
+            if(r11_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta12();
+            }
+        });
+
+        r11_b.click(function(){
+            if(r11_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta12();
+            }
+        });
+
+        r11_c.click(function(){
+            if(r11_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta12();
+            }
+        });
+        
+        //Respuestas 12-----------------------------------------------------------
+        r12_a.click(function(){
+            if(r12_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta13();
+            }
+        });
+
+        r12_b.click(function(){
+            if(r12_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta13();
+            }
+        });
+        
+        //Respuestas 13-----------------------------------------------------------
+        r13_a.click(function(){
+            if(r13_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta14();
+            }
+        });
+
+        r13_b.click(function(){
+            if(r13_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta14();
+            }
+        });
+
+        r13_c.click(function(){
+            if(r13_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta14();
+            }
+        });
+        
+        //Respuestas 14-----------------------------------------------------------
+        r14_a.click(function(){
+            if(r14_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta15();
+            }
+        });
+
+        r14_b.click(function(){
+            if(r14_b.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta15();
+            }
+        });
+
+        r14_c.click(function(){
+            if(r14_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta15();
+            }
+        });
+        
+        //Respuestas 15-----------------------------------------------------------
+        r15_a.click(function(){
+            if(r15_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta16();
+            }
+        });
+
+        r15_b.click(function(){
+            if(r15_b.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta16();
+            }
+        });
+
+        r15_c.click(function(){
+            if(r15_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta16();
+            }
+        });
+        
+        //Respuestas 16-----------------------------------------------------------
+        r16_a.click(function(){
+            if(r16_a.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta17();
+            }
+        });
+
+        r16_b.click(function(){
+            if(r16_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta17();
+            }
+        });
+
+        r16_c.click(function(){
+            if(r16_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta17();
+            }
+        });
+        
+        //Respuestas 17-----------------------------------------------------------
+        r17_a.click(function(){
+            if(r17_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta18();
+            }
+        });
+
+        r17_b.click(function(){
+            if(r17_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta18();
+            }
+        });
+
+        r17_c.click(function(){
+            if(r17_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta18();
+            }
+        });
+        
+        //Respuestas 18-----------------------------------------------------------
+        r18_a.click(function(){
+            if(r18_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta19();
+            }
+        });
+
+        r18_b.click(function(){
+            if(r18_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta19();
+            }
+        });
+
+        r18_c.click(function(){
+            if(r18_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta19();
+            }
+        });
+        
+        //Respuestas 19-----------------------------------------------------------
+        r19_a.click(function(){
+            if(r19_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta20();
+            }
+        });
+
+        r19_b.click(function(){
+            if(r19_b.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                pregunta20();
+            }
+        });
+
+        r19_c.click(function(){
+            if(r19_c.css('cursor') == 'pointer'){
+                audio[1].play();
+                pregunta20();
+            }
+        });
+        
+        //Respuestas 20-----------------------------------------------------------
+        r20_a.click(function(){
+            if(r20_a.css('cursor') == 'pointer'){
+                audio[1].play();
+                salidaPreguntas();
+            }
+        });
+
+        r20_b.click(function(){
+            if(r20_b.css('cursor') == 'pointer'){
+                audio[1].play();
+                salidaPreguntas();
+            }
+        });
+
+        r20_c.click(function(){
+            if(r20_c.css('cursor') == 'pointer'){
+                audio[0].play();
+                aciertos++;
+                salidaPreguntas();
+            }
+        });
+
+        function finalPagina(){
+            aplicacion.siguientePagina();
+        }
+
+    </script>
+</body>
+</html>
