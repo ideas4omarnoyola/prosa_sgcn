@@ -62,14 +62,9 @@ function retrocederPagina(){
 function irPagina(numPagina){
     const pagina = numPagina - 1;
 
-    if(pagina <= totalPaginas && pagina >= 0){
+    if(pagina <= totalPaginas - 1 && pagina >= 0){
         noPagina = pagina;
         paginasVistas = noPagina;
-
-        if(noPagina == totalPaginas - 1){
-            statusCurso('completed');
-            asignarCalificacion(totalPuntos);
-        }
 
         activarBotonAtras();
         actualizarTemario();
