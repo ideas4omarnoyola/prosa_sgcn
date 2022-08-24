@@ -188,14 +188,16 @@ function silenciarOPrender(){
 }
 
 function detenerAudios(){
-    audiosActivos = false;
-    clearTimeout(delayAudio);
-    audioActual.pause();
-    audioActual = undefined;
+    if(audioActual){
+        audiosActivos = false;
+        clearTimeout(delayAudio);
+        audioActual.pause();
+        audioActual = undefined;
 
-    setTimeout(()=>{
-        audiosActivos = true;
-    }, 1500);
+        setTimeout(()=>{
+            audiosActivos = true;
+        }, 1500);
+    }
 }
 
 // Metodo de abrir y cerrar temario------------------------------------------
@@ -224,6 +226,11 @@ function compararCalificaciones(calificacion){
 // Intentos del curso
 function siguienteIntento(){
     intentos++;
+}
+
+// Regresar el No. de Intentos
+function verIntento(){
+    return intentos;
 }
 
 function reiniciarInntentos(){
