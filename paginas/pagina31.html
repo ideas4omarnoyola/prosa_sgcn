@@ -442,33 +442,33 @@
             animacionEntrada(boton3, 'default', 2.5);
             animacionEntrada(boton4, 'default', 2.8);
             setTimeout(()=>{
-                flotar(robot31, 'i');
-                hablar(robot31, 'i');
+                flotar(robot31, 'd');
+                hablar(robot31, 'd');
             }, 1500);
         }
 
 
         function activarBoton1(){
-            pararHablar();      
+            pausarHablar();      
             parpadear(boton1);            
         }
 
          function activabtn2(){
-            //esconderbtns();
+          pausarHablar();  
              setTimeout(() => {
                 parpadear(boton2);
             }, 1000);
         }
 
          function activabtn3(){
-            //esconderbtns();
+            pausarHablar();  
              setTimeout(() => {
                 parpadear(boton3);
             }, 1000);
         }
 
          function activabtn4(){
-           // esconderbtns();
+          pausarHablar();  
             setTimeout(() => {
                 parpadear(boton4);
             }, 1000);
@@ -485,6 +485,7 @@
         boton1.click(function(){
             if(boton1.css('cursor') == 'pointer'){                
                  aplicacion.reproducirAudio(audio[1], activabtn2, 1);
+                 reanudarHablar();
                  dejarParpadear(boton1);
                  animacionEntrada(info_btn1, 'default', 0);
                  boton1.hide();
@@ -493,7 +494,8 @@
 
          boton2.click(function(){
             if(boton2.css('cursor') == 'pointer'){                
-                 aplicacion.reproducirAudio(audio[2], activabtn3, 1);  
+                 aplicacion.reproducirAudio(audio[2], activabtn3, 1);
+                 reanudarHablar();  
                 dejarParpadear(boton2);
                  animacionEntrada(info_btn2, 'default', 0);
                  boton2.hide();              
@@ -503,7 +505,8 @@
            boton3.click(function(){
             if(boton3.css('cursor') == 'pointer'){
                 
-                 aplicacion.reproducirAudio(audio[3], activabtn4, 1); 
+                 aplicacion.reproducirAudio(audio[3], activabtn4, 1);
+                 reanudarHablar(); 
                  dejarParpadear(boton3);
                  animacionEntrada(info_btn3, 'default', 0);
                  boton3.hide();               
@@ -514,6 +517,7 @@
             if(boton4.css('cursor') == 'pointer'){
                 
                  aplicacion.reproducirAudio(audio[4], finalPagina, 1); 
+                 reanudarHablar();
                  dejarParpadear(boton4);
                  animacionEntrada(info_btn4, 'default', 0);
                  boton4.hide();               
@@ -521,9 +525,12 @@
         });
 
          function finalPagina(){
-          aplicacion.reproducirAudio(audio[5], aplicacion.terminaPantalla, 1); 
+          aplicacion.reproducirAudio(audio[5], siguiente, 1); 
           animacionEntrada(texto2, 'default', 1);
-            aplicacion.terminaPantalla();
+        }
+
+        function siguiente(){
+          aplicacion.terminaPantalla();
         }
 
     </script>

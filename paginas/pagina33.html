@@ -443,20 +443,20 @@
             // animacionEntrada(boton3, 'default', 2.5);
             // animacionEntrada(boton4, 'default', 2.8);
             setTimeout(()=>{
-                flotar(robot31, 'i');
-                hablar(robot31, 'i');
+                flotar(robot31, 'd');
+                hablar(robot31, 'd');
             }, 1500);
         }
 
 
         function activarBoton1(){
-            pararHablar();      
+            pausarHablar();      
             parpadear(boton1);            
         }
 
          function activabtn2(){
             //esconderbtns();
-              pararHablar(); 
+              pausarHablar(); 
              setTimeout(() => {
                 parpadear(boton2);
             }, 1000);
@@ -491,7 +491,7 @@
                  animacionEntrada(info_btn1, 'default', 0);
                  // boton1.hide();
                   setTimeout(()=>{               
-                hablar(robot31, 'i');
+                    reanudarHablar();
             }, 1000);
 
             }
@@ -504,7 +504,7 @@
                  animacionEntrada(info_btn2, 'default', 0);
                  // boton2.hide(); 
                   setTimeout(()=>{               
-                hablar(robot31, 'i');
+                    reanudarHablar();
             }, 1000);
 
             }
