@@ -48,7 +48,7 @@ $(window).on("load", function(){
 
     // Modo desarrollador y avanzar con teclas
     modoDesarrollador();
-    // moverTeclas();
+    moverTeclas();
 });
 
 // Al redimensionar la página----------------------------------------------
