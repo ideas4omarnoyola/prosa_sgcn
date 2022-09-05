@@ -412,7 +412,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-        new Audio('../audios/Prosa_Integracion_08_04.mp3'),
+        new Audio('../audios/continuidad15.mp3'),
+        new Audio('../audios/continuidad15.1.mp3'),
           new Audio('../audios/s_bien.mp3'),
           new Audio('../audios/s_mal.mp3'),
         ]
@@ -425,21 +426,25 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], actividad, 1);
+            aplicacion.reproducirAudio(audio[0], terminaTitulo, 2);
             animacionEntrada(robot15, 'default', 1, 1);
             animacionEntrada(titulo, 'default', 1, 1);
-            animacionEntrada(dialogo, 'default', 1, 1);
-            animacionEntrada(pregunta, 'default', 1, 1);
-            animacionEntrada(cables, 'default', 1, 1);
-            animacionEntrada(r1, 'default', 1, 1);
-            animacionEntrada(r2, 'default', 1, 1);
-            animacionEntrada(r3, 'default', 1, 1);
-
+        
             setTimeout(()=>{
                 flotar(robot15, 'i');
                 hablar(robot15, 'i');
             }, 1500);
             
+        }
+
+        function terminaTitulo(){
+            aplicacion.reproducirAudio(audio[1], actividad, 1);
+            animacionEntrada(dialogo, 'default', 1, 1);
+            animacionEntrada(pregunta, 'default', 1, 5);
+            animacionEntrada(cables, 'default', 1, 5);
+            animacionEntrada(r1, 'default', 1, 5);
+            animacionEntrada(r2, 'default', 1, 5);
+            animacionEntrada(r3, 'default', 1, 5);
         }
 
         function actividad(){
@@ -451,13 +456,13 @@
 
             r1.click(()=>{
                 if(r1.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], 1);
+                    aplicacion.reproducirAudio(audio[3], 1);
                 }
             });
 
             r2.click(()=>{
                 if(r2.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+                    aplicacion.reproducirAudio(audio[2], terminaPagina, 1);
                     animacionSalida(cables, 'default', .5);
                     animacionEntrada(acierto, 'default', 1);
                 }
@@ -465,7 +470,7 @@
 
             r3.click(()=>{
                 if(r3.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], 1);
+                    aplicacion.reproducirAudio(audio[3], 1);
                 }
             });
         }

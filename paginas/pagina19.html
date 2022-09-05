@@ -391,6 +391,7 @@
     <img class="elementos" id="img05" src="../img/pagina19/img05.png" data-posX="0" data-posY="0">
     <img class="elementos" id="img06" src="../img/pagina19/img06.png" data-posX="0" data-posY="0">
     <img class="elementos" id="img07" src="../img/pagina19/img07.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="img08" src="../img/pagina19/img08.png" data-posX="0" data-posY="0">
     
 
     
@@ -411,11 +412,20 @@
         const img05 = $('#img05');
         const img06 = $('#img06');
         const img07 = $('#img07');
+        const img08 = $('#img08');
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_08_06.mp3'),
-            new Audio('../audios/Prosa_Integracion_08_07.mp3'),
+            new Audio('../audios/continuidad19.mp3'),
+            new Audio('../audios/continuidad19.1.mp3'),
+            new Audio('../audios/continuidad19.2.mp3'),
+            new Audio('../audios/continuidad19.3.mp3'),
+            new Audio('../audios/continuidad19.4.mp3'),
+            new Audio('../audios/continuidad19.5.mp3'),
+            new Audio('../audios/continuidad19.6.mp3'),
+            new Audio('../audios/continuidad19.7.mp3'),
+            new Audio('../audios/continuidad19.8.mp3'),
+            new Audio('../audios/continuidad19.9.mp3'),
         ]
 
         // Al cargarse la página
@@ -425,31 +435,64 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], terminaDialogo, 1);
+            aplicacion.reproducirAudio(audio[0], terminaTitulo, 2);
             animacionEntrada(robot19, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
-            animacionEntrada(dialogo, 'default', 1, 1);
-
+            
             setTimeout(()=>{
                 flotar(robot19, 'i');
                 hablar(robot19, 'i');
             }, 1500);
         }
 
-        function terminaDialogo(){
+        function terminaTitulo(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
-            animacionEntrada(img01, 'default', 1);
-            animacionEntrada(img02, 'default', 1.5);
-            animacionEntrada(img03, 'default', 2);
-            animacionEntrada(img04, 'default', 2.5);
-            animacionEntrada(img05, 'default', 3);
-            animacionEntrada(img06, 'default', 3.5);
-            animacionEntrada(img07, 'default', 4);
-            
+            aplicacion.reproducirAudio(audio[1], terminaDialogo, 1);
+            animacionEntrada(dialogo, 'default', 1, 1);
+          
             setTimeout(() => {
                 reanudarHablar();
             }, 1500);
+        }
+        function terminaDialogo(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[2], terminaAudio01, 1);
+            animacionEntrada(img01, 'default', 1);
+          
+            setTimeout(() => {
+                reanudarHablar();
+            }, 1500);
+        }
+
+        function terminaAudio01(){
+            aplicacion.reproducirAudio(audio[3], terminaAudio02, 1);
+            animacionEntrada(img02, 'default', 1);
+        }
+
+        function terminaAudio02(){
+            aplicacion.reproducirAudio(audio[4], terminaAudio03, 1);
+            animacionEntrada(img03, 'default', 1);
+        }
+
+        function terminaAudio03(){
+            aplicacion.reproducirAudio(audio[5], terminaAudio04, 1);
+            animacionEntrada(img04, 'default', 1);
+        }
+        function terminaAudio04(){
+            aplicacion.reproducirAudio(audio[6], terminaAudio05, 1);
+            animacionEntrada(img05, 'default', 1);
+        }
+        function terminaAudio05(){
+            aplicacion.reproducirAudio(audio[7], terminaAudio06, 1);
+            animacionEntrada(img06, 'default', 1);
+        }
+        function terminaAudio06(){
+            aplicacion.reproducirAudio(audio[8], terminaAudio07, 1);
+            animacionEntrada(img07, 'default', 1);
+        }
+        function terminaAudio07(){
+            aplicacion.reproducirAudio(audio[9], terminaPagina, 1);
+            animacionEntrada(img08, 'default', 1);
         }
 
         function terminaPagina(){

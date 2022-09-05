@@ -393,7 +393,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_70_01.mp3')
+            new Audio('../audios/continuidad67.mp3'),
+            new Audio('../audios/continuidad67.1.mp3'),
         ]
 
         // Al cargarse la página
@@ -403,14 +404,26 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], 1);
+            aplicacion.reproducirAudio(audio[0], terminaAudio01, 2);
+            animacionEntrada(robot67, 'izquierda-derecha', 1, 1); 
             animacionEntrada(cierre, 'izquierda-derecha', 1, 1);
-            animacionEntrada(robot67, 'izquierda-derecha', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot67, 'i');
                 hablar(robot67, 'i');
             }, 1500);
+        }
+        function terminaAudio01(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[1], termina, 1);
+            
+            setTimeout(()=>{
+                reanudarHablar();
+            }, 1500);
+        }
+
+        function termina(){
+          pararHablar();
         }
 
     </script>

@@ -415,9 +415,10 @@
 
         // Audios------------------------------------------------------
         const audio = [
-          new Audio('../audios/Prosa_Integracion_03_01.mp3'),
-          new Audio('../audios/Prosa_Integracion_03_02.mp3'),
-          new Audio('../audios/Prosa_Integracion_03_03.mp3'),
+          new Audio('../audios/continuidad3.mp3'),
+          new Audio('../audios/continuidad3.1.mp3'),
+          new Audio('../audios/continuidad3.2.mp3'),
+
         ]
 
         // Al cargarse la página
@@ -428,10 +429,9 @@
 
         function iniciarContenido(){
             aplicacion.reproducirAudio(audio[0], terminaDialogo01, 1);
-            animacionEntrada(robot03, 'izquierda-derecha', 1, 1);
-            animacionEntrada(titulo, 'izquierda-derecha', 1, 1.5);
-            animacionEntrada(dialogo01, 'izquierda-derecha', 1, 1.5);
-
+            animacionEntrada(robot03, 'izquierda-derecha', 1, .5);
+            animacionEntrada(titulo, 'izquierda-derecha', 1, .5);
+            
             setTimeout(()=>{
                 flotar(robot03, 'i');
                 hablar(robot03, 'i');
@@ -440,7 +440,7 @@
 
         function terminaDialogo01(){
             pausarHablar();
-            animacionEntrada(dialogo02, 'default', 1, 1);
+            animacionEntrada(dialogo01, 'izquierda-derecha', 1, 1);
             aplicacion.reproducirAudio(audio[1], terminaDialogo02, 1);
 
             setTimeout(() => {
@@ -450,7 +450,7 @@
 
         function terminaDialogo02(){
             pausarHablar();
-            animacionEntrada(boton, 'default', 1, 1);
+            animacionEntrada(dialogo02, 'default', 1, 1);
             aplicacion.reproducirAudio(audio[2], clickBtn, 1);
 
             setTimeout(() => {

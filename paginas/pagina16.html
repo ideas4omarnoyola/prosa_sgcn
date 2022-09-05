@@ -412,7 +412,6 @@
 
         // Audios------------------------------------------------------
         const audio = [
-          new Audio('../audios/Prosa_Integracion_08_05.mp3'),
           new Audio('../audios/s_bien.mp3'),
           new Audio('../audios/s_mal.mp3'),
         ]
@@ -425,7 +424,6 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], actividad, 1);
             animacionEntrada(robot16, 'default', 1, 1);
             animacionEntrada(titulo, 'default', 1, 1);
             animacionEntrada(dialogo, 'default', 1, 1);
@@ -437,13 +435,13 @@
 
             setTimeout(()=>{
                 flotar(robot16, 'i');
-                hablar(robot16, 'i');
             }, 1500);
+
+            actividad();
             
         }
 
         function actividad(){
-            pararHablar();
 
             respuestas.css({
                 'cursor': 'pointer',
@@ -451,19 +449,19 @@
 
             r1.click(()=>{
                 if(r1.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], 1);
+                    aplicacion.reproducirAudio(audio[1], 1);
                 }
             });
 
             r2.click(()=>{
                 if(r2.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], 1);
+                    aplicacion.reproducirAudio(audio[1], 1);
                 }
             });
 
             r3.click(()=>{
                 if(r3.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+                    aplicacion.reproducirAudio(audio[0], terminaPagina, 1);
                     animacionSalida(cables, 'default', .5);
                     animacionEntrada(acierto, 'default', 1);
                 }

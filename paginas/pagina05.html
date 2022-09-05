@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página 05</title>
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="../css/estilos.css">
+     <!-- Estilos -->
+     <link rel="stylesheet" href="../css/estilos.css">
 
-    <!-- Librerias -->
-    <script src="../js/librerias/jquery.min.js"></script>
-    <script src="../js/librerias/gsap.min.js"></script>
-
-    <!-- Script de animaciones -->
-    <script src="../js/animaciones.js"></script>
-    <script src="../js/movimientosRobot.js"></script>
-    <!-- Scripts posicionar elementos -->
-    <script src="../js/redimensionarElementos.js"></script>
-    <script src="../js/posicionar.js"></script>
+     <!-- Librerias -->
+     <script src="../js/librerias/jquery.min.js"></script>
+     <script src="../js/librerias/gsap.min.js"></script>
+ 
+     <!-- Script de animaciones -->
+     <script src="../js/animaciones.js"></script>
+     <script src="../js/movimientosRobot.js"></script>
+     <!-- Scripts posicionar elementos -->
+     <script src="../js/redimensionarElementos.js"></script>
+     <script src="../js/posicionar.js"></script>
 
 </head>
 <body class="pagina">
@@ -405,6 +405,7 @@
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
+        
         const robot05 = $('#robot05');
         const titulo = $('#titulo');
         const dialogo = $('#dialogo');
@@ -412,8 +413,10 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_03_05.mp3'),
-            new Audio('../audios/Prosa_Integracion_03_06.mp3'),
+            new Audio('../audios/continuidad5.mp3'),
+            new Audio('../audios/continuidad5.1.mp3'),
+            new Audio('../audios/continuidad5.2.mp3'),
+ 
         ]
 
         // Al cargarse la página
@@ -423,10 +426,20 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], terminaDialogo, 1);
+            aplicacion.reproducirAudio(audio[0], terminaTitulo, 2);
             animacionEntrada(robot05, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1);
+
+            setTimeout(()=>{
+                flotar(robot05, 'i');
+                hablar(robot05, 'i');
+            }, 1500);
+        }
+
+        function terminaTitulo(){
+            aplicacion.reproducirAudio(audio[1], terminaDialogo, 1);
+            animacionEntrada(info01, 'default', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot05, 'i');
@@ -436,8 +449,7 @@
 
         function terminaDialogo(){
             pausarHablar();
-            animacionEntrada(info01, 'default', 1);
-            aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+            aplicacion.reproducirAudio(audio[2], terminaPagina, 1);
             
             setTimeout(() => {
                 reanudarHablar();

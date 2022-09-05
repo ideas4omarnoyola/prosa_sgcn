@@ -403,8 +403,10 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_08_03.mp3'),
-            new Audio('../audios/Prosa_Integracion_08_02.mp3'),
+            new Audio('../audios/continuidad14.mp3'),
+            new Audio('../audios/continuidad14.1.mp3'),
+            new Audio('../audios/continuidad14.2.mp3'),
+            new Audio('../audios/continuidad14.3.mp3'),
         ]
 
         // Al cargarse la página
@@ -414,23 +416,39 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], terminaCuadro01, 1);
+            aplicacion.reproducirAudio(audio[0], titulo01, 1);
             animacionEntrada(robot14, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(img01, 'default', 1, 1);
-            animacionEntrada(cuadro01, 'default', 1, 2);
 
             setTimeout(()=>{
                 flotar(robot14, 'd');
                 hablar(robot14, 'd');
             }, 1500);
         }
+        function titulo01(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[1], terminaCuadro01, 1);
+            animacionEntrada(cuadro01, 'default', 1, 1);
+
+            setTimeout(()=>{
+                reanudarHablar();
+            }, 1500);
+        }
 
         function terminaCuadro01(){
             pausarHablar();
             animacionEntrada(img02, 'default', 1);
-            animacionEntrada(cuadro02, 'default', 2);
-            aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+            aplicacion.reproducirAudio(audio[2], titulo02, 1);
+            
+            setTimeout(() => {
+                reanudarHablar();
+            }, 1500);
+        }
+        function titulo02(){
+            pausarHablar();
+            animacionEntrada(cuadro02, 'default', 1);
+            aplicacion.reproducirAudio(audio[3], terminaPagina, 1);
             
             setTimeout(() => {
                 reanudarHablar();
