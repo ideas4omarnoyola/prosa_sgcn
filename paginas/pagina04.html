@@ -415,7 +415,7 @@
 
         // Audios------------------------------------------------------
         const audio = [
-          new Audio('../audios/Prosa_Integracion_03_04.mp3'),
+          new Audio('../audios/continuidad4.mp3'),
         ]
 
         // Al cargarse la página
@@ -425,9 +425,9 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], activarBoton, 1);
+            aplicacion.reproducirAudio(audio[0], activarBoton, 2);
             animacionEntrada(robot04, 'default', 1);
-            animacionEntrada(titulo, 'default', 1.5);
+            animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1.5);
             setTimeout(()=>{
                 flotar(robot04, 'i');
