@@ -421,7 +421,7 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+            new Audio('../audios/continuidad_18.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3')
         ]
@@ -469,6 +469,7 @@
         });
 
         r3.click(function(){
+            audio[1].play();
             girarIzquierda(engrane1, 10);
             girarDerecha(engrane2, 10);
             girarIzquierda(engrane3, 10);
