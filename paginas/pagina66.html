@@ -594,8 +594,9 @@
         const audio = [
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+            new Audio('../audios/continuidad_66_1.mp3'),
+            new Audio('../audios/continuidad_66_2.mp3'),
+            new Audio('../audios/evaluacionfinal.mp3'),
         ]
 
         // Al cargarse la página
@@ -605,6 +606,7 @@
         });
 
         function iniciarContenido(){
+            audio[4].play();
             animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
             animacionEntrada(p1, 'derecha-izquierda', 1, 1);
             animacionEntrada(r1_a, 'default', 1, 2);

@@ -498,7 +498,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_01_01.mp3')
+            new Audio('../audios/continuidad_48.mp3'),
+            new Audio('../audios/s_bien.mp3'),
         ]
 
         // Al cargarse la página
@@ -580,6 +581,7 @@
                 dragActivo.css('cursor', 'default');
 
                 if(aciertos == 8){
+                    audio[1].play();
                     aplicacion.terminaPantalla();
                 }
             }

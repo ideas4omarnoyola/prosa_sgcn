@@ -411,8 +411,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/s_bien.mp3')
+            new Audio('../audios/continuidad_28.mp3'),
+            new Audio('../audios/continuidad_28.1.mp3'),
         ]
 
         // Al cargarse la página
@@ -422,14 +422,23 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], activarVideo, 2);
+            aplicacion.reproducirAudio(audio[0], dialogo, 2);
             animacionEntrada(robot, 'default', 1, 1);
-            animacionEntrada(d1, 'default', 1, 1);
             animacionEntrada(engranes, 'default', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot, 'i');
                 hablar(robot, 'i');
+            }, 2000);
+        }
+
+        function dialogo(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[1], activarVideo, 2);
+            animacionEntrada(d1, 'default', 1, 1);
+
+            setTimeout(()=>{
+                reanudarHablar();
             }, 2000);
         }
 

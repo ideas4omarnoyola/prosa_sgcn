@@ -411,8 +411,14 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_65_06.mp3'),
-            new Audio('../audios/Prosa_Integracion_65_07.mp3'),
+            new Audio('../audios/continuidad_36.mp3'),
+            new Audio('../audios/continuidad_36.1.mp3'),
+            new Audio('../audios/continuidad_36.2.mp3'),
+            new Audio('../audios/continuidad_36.3.mp3'),
+            new Audio('../audios/continuidad_36.4.mp3'),
+            new Audio('../audios/continuidad_36.5.mp3'),
+            new Audio('../audios/continuidad_36.6.mp3'),
+            new Audio('../audios/continuidad_36.7.mp3'),
         ]
 
         // Al cargarse la página
@@ -425,7 +431,7 @@
             aplicacion.reproducirAudio(audio[0], terminaDialogo, 1);
             animacionEntrada(robot37, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
-            animacionEntrada(dialogo, 'default', 1, 1);
+            animacionEntrada(esquema, 'default', 1);
 
             setTimeout(()=>{
                 flotar(robot37, 'd');
@@ -435,18 +441,42 @@
 
         function terminaDialogo(){
             pausarHablar();
-            animacionEntrada(esquema, 'default', 1);
+            animacionEntrada(dialogo, 'default', 1, 1);
             animacionEntrada(seguridad, 'default', 1);
             animacionEntrada(administracion, 'default', 1);
             animacionEntrada(riesgo, 'default', 1);
             animacionEntrada(gestion, 'default', 1);
             animacionEntrada(ti, 'default', 1);
             animacionEntrada(finanzas, 'default', 1);
-            aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+            aplicacion.reproducirAudio(audio[1], esquema1, 1);
             
             setTimeout(() => {
                 reanudarHablar();
             }, 1700);
+        }
+
+        function esquema1(){
+            aplicacion.reproducirAudio(audio[2], esquema2, 1);
+        }
+
+        function esquema2(){
+            aplicacion.reproducirAudio(audio[3], esquema3, 1);
+        }
+
+        function esquema3(){
+            aplicacion.reproducirAudio(audio[4], esquema4, 1);
+        }
+
+        function esquema4(){
+            aplicacion.reproducirAudio(audio[5], esquema5, 1);
+        }
+
+        function esquema5(){
+            aplicacion.reproducirAudio(audio[6], esquema6, 1);
+        }
+
+        function esquema6(){
+            aplicacion.reproducirAudio(audio[7], terminaPagina, 1);
         }
 
         function terminaPagina(){

@@ -384,6 +384,7 @@
 
     <img class="elementos" id="titulo" src="../img/pagina52/titulo.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="d1" src="../img/pagina52/d1.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="documentos" src="../img/pagina52/documentos.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="texto1" src="../img/pagina52/texto1.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="texto2" src="../img/pagina52/texto2.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="texto3" src="../img/pagina52/texto3.png" data-posX="0" data-posY="0"/>
@@ -403,14 +404,15 @@
         const texto2 = $('#texto2');
         const texto3 = $('#texto3');
         const calendario = $('#calendario');
+        const documentos = $('#documentos');
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+            new Audio('../audios/continuidad_52.mp3'),
+            new Audio('../audios/continuidad_52.1.mp3'),
+            new Audio('../audios/continuidad_52.2.mp3'),
+            new Audio('../audios/continuidad_52.3.mp3'),
+            new Audio('../audios/continuidad_52.4.mp3'),
         ]
 
         // Al cargarse la página
@@ -423,7 +425,8 @@
             aplicacion.reproducirAudio(audio[0], leerTitulo, 2);
             animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
             animacionEntrada(robot, 'derecha-izquierda', 1, 1.5);
-            animacionEntrada(d1, 'derecha-izquierda', 1, 2);
+            animacionEntrada(calendario, 'derecha-izquierda', 1, 1);
+            animacionEntrada(documentos, 'derecha-izquierda', 1, 2);
 
             setTimeout(()=>{
                 flotar(robot, 'i');
@@ -434,8 +437,8 @@
         function leerTitulo(){
             pausarHablar();
             aplicacion.reproducirAudio(audio[1], leer1, 1);
-            animacionSalida(d1, 'default', 1);
-            animacionEntrada(calendario, 'default', 1, 1);
+            animacionEntrada(d1, 'default', 1, 1);
+            
             setTimeout(()=>{
                 reanudarHablar();
             }, 1000);
@@ -444,6 +447,7 @@
         function leer1(){
             pausarHablar();
             aplicacion.reproducirAudio(audio[2], leer2, 1);
+            animacionSalida(d1, 'default', 1);
             animacionEntrada(texto1, 'default', 1, 1);
             setTimeout(()=>{
                 reanudarHablar();

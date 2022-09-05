@@ -402,10 +402,11 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
-            new Audio('../audios/Prosa_Integracion_01_01.mp3'),
+            new Audio('../audios/continuidad_62.mp3'),
+            new Audio('../audios/continuidad_62.1.mp3'),
+            new Audio('../audios/continuidad_62.2.mp3'),
+            new Audio('../audios/continuidad_62.3.mp3'),
+            new Audio('../audios/continuidad_62.4.mp3'),
             new Audio('../audios/alerta.mp3'),
             new Audio('../audios/alerta.mp3'),
             new Audio('../audios/alerta.mp3'),
@@ -418,10 +419,10 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], alerta1, 2);
+            aplicacion.reproducirAudio(audio[0], dialogo1, 2);
             animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
             animacionEntrada(robot, 'derecha-izquierda', 1, 1.5);
-            animacionEntrada(d1, 'default', 1, 2);
+            
 
             setTimeout(()=>{
                 flotar(robot, 'i');
@@ -429,23 +430,33 @@
             }, 2500);
         }
 
+        function dialogo1(){
+            pausarHablar()
+            aplicacion.reproducirAudio(audio[1], alerta1, 1);
+            animacionEntrada(d1, 'default', 1, 2);
+
+            setTimeout(()=>{
+                reanudarHablar();
+            }, 1000);
+        }
+
         function alerta1(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[4], info1, 1);
+            aplicacion.reproducirAudio(audio[5], info1, 1);
         }
 
         function alerta2(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[5], info2, 1);
+            aplicacion.reproducirAudio(audio[6], info2, 1);
         }
 
         function alerta3(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[6], info3, 1);
+            aplicacion.reproducirAudio(audio[7], info3, 1);
         }
 
         function info1(){
-            aplicacion.reproducirAudio(audio[1], alerta2, 2);
+            aplicacion.reproducirAudio(audio[2], alerta2, 2);
             animacionEntrada(texto1, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -454,7 +465,7 @@
         }
 
         function info2(){
-            aplicacion.reproducirAudio(audio[2], alerta3, 2);
+            aplicacion.reproducirAudio(audio[3], alerta3, 2);
             animacionEntrada(texto2, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -463,7 +474,7 @@
         }
 
         function info3(){
-            aplicacion.reproducirAudio(audio[3], finalPagina, 2);
+            aplicacion.reproducirAudio(audio[4], finalPagina, 2);
             animacionEntrada(texto3, 'default', 1, 1);
 
             setTimeout(()=>{
