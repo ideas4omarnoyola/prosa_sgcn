@@ -419,8 +419,9 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/continuidad9.mp3'),
-            new Audio('../audios/continuidad9.1.mp3'),
+            new Audio('../audios/continuidad_9.mp3'),
+            new Audio('../audios/continuidad_9.1.mp3'),
+            new Audio('../audios/alerta.mp3'),
         ]
 
         // Al cargarse la página
@@ -430,18 +431,23 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], terminaDialogo, 1);
+            aplicacion.reproducirAudio(audio[0], alerta, 1);
             animacionEntrada(robot09, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1);
-            animacionEntrada(img01, 'default', 1, 2);
-            animacionEntrada(img02, 'default', 1, 2.5);
-            animacionEntrada(img03, 'default', 1, 3);
+            animacionEntrada(img01, 'default', 1, 1);
+            animacionEntrada(img02, 'default', 1, 1);
+            animacionEntrada(img03, 'default', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot09, 'i');
                 hablar(robot09, 'i');
             }, 1500);
+        }
+
+        function alerta(){
+          pausarHablar();
+          aplicacion.reproducirAudio(audio[2], terminaDialogo, 1);
         }
 
         function terminaDialogo(){
