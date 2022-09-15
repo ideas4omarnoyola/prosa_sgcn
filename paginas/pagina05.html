@@ -413,9 +413,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/continuidad5.mp3'),
-            new Audio('../audios/continuidad5.1.mp3'),
-            new Audio('../audios/continuidad5.2.mp3'),
+            new Audio('../audios/continuidad_5.mp3'),
+            new Audio('../audios/continuidad_5.1.mp3'),
  
         ]
 
@@ -438,21 +437,12 @@
         }
 
         function terminaTitulo(){
-            aplicacion.reproducirAudio(audio[1], terminaDialogo, 1);
+            aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
             animacionEntrada(info01, 'default', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot05, 'i');
                 hablar(robot05, 'i');
-            }, 1700);
-        }
-
-        function terminaDialogo(){
-            pausarHablar();
-            aplicacion.reproducirAudio(audio[2], terminaPagina, 1);
-            
-            setTimeout(() => {
-                reanudarHablar();
             }, 1700);
         }
 

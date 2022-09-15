@@ -412,8 +412,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-        new Audio('../audios/continuidad15.mp3'),
-        new Audio('../audios/continuidad15.1.mp3'),
+          new Audio('../audios/continuidad_15.mp3'),
+          // new Audio('../audios/continuidad15.1.mp3'),
           new Audio('../audios/s_bien.mp3'),
           new Audio('../audios/s_mal.mp3'),
         ]
@@ -429,7 +429,8 @@
             aplicacion.reproducirAudio(audio[0], terminaTitulo, 2);
             animacionEntrada(robot15, 'default', 1, 1);
             animacionEntrada(titulo, 'default', 1, 1);
-        
+            animacionEntrada(dialogo, 'default', 1, 1);
+      
             setTimeout(()=>{
                 flotar(robot15, 'i');
                 hablar(robot15, 'i');
@@ -438,13 +439,13 @@
         }
 
         function terminaTitulo(){
-            aplicacion.reproducirAudio(audio[1], actividad, 1);
-            animacionEntrada(dialogo, 'default', 1, 1);
-            animacionEntrada(pregunta, 'default', 1, 5);
-            animacionEntrada(cables, 'default', 1, 5);
-            animacionEntrada(r1, 'default', 1, 5);
-            animacionEntrada(r2, 'default', 1, 5);
-            animacionEntrada(r3, 'default', 1, 5);
+            animacionEntrada(pregunta, 'default', 1, 1);
+            animacionEntrada(cables, 'default', 1, 1);
+            animacionEntrada(r1, 'default', 1, 1);
+            animacionEntrada(r2, 'default', 1, 1);
+            animacionEntrada(r3, 'default', 1, 1);
+
+            actividad();
         }
 
         function actividad(){
