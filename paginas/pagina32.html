@@ -423,8 +423,7 @@
           new Audio('../audios/continuidad_32.mp3'),
           new Audio('../audios/continuidad_32.1.mp3'),
           new Audio('../audios/continuidad_32.2.mp3'),
-          new Audio('../audios/continuidad_32.3.mp3'),
-          new Audio('../audios/continuidad_32.4.mp3'),
+          new Audio('../audios/continuidad_32.3.mp3')
         ]
 
         // Al cargarse la página
@@ -452,15 +451,7 @@
 
         function dialogo2(){
             pausarHablar(); 
-            aplicacion.reproducirAudio(audio[1], dialogo3, 1);
-
-            setTimeout(()=>{
-                reanudarHablar();
-            }, 1000);
-        }
-
-        function dialogo3(){
-            aplicacion.reproducirAudio(audio[2], activarBoton1, 1);
+            aplicacion.reproducirAudio(audio[1], activarBoton1, 1);
 
             setTimeout(()=>{
                 reanudarHablar();
@@ -505,7 +496,7 @@
 
         boton1.click(function(){
             if(boton1.css('cursor') == 'pointer'){                
-                  aplicacion.reproducirAudio(audio[3], activabtn2, 1);
+                  aplicacion.reproducirAudio(audio[2], activabtn2, 1);
                   animacionEntrada(info_btn1, 'default', 0);
                   dejarParpadear(boton1);
                  // boton1.hide();
@@ -518,7 +509,7 @@
 
          boton2.click(function(){
             if(boton2.css('cursor') == 'pointer'){                
-                aplicacion.reproducirAudio(audio[4], finalPagina, 1);  
+                aplicacion.reproducirAudio(audio[3], finalPagina, 1);  
                 dejarParpadear(boton2);
                 animacionEntrada(info_btn2, 'default', 0);
                  // boton2.hide(); 

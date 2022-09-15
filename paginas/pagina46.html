@@ -408,8 +408,7 @@
         const audio = [
           new Audio('../audios/continuidad_46.mp3'),
           new Audio('../audios/continuidad_46.1.mp3'),
-          new Audio('../audios/continuidad_46.2.mp3'),
-          new Audio('../audios/continuidad_46.3.mp3'),
+          new Audio('../audios/continuidad_46.2.mp3')
         ]
 
         // Al cargarse la página
@@ -419,24 +418,15 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], dialogo1, 2);
+            aplicacion.reproducirAudio(audio[0], botonParpadea, 2);
             animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
             animacionEntrada(robot, 'derecha-izquierda', 1, 1);
             animacionEntrada(plano, 'derecha-izquierda', 1, 1);
+            animacionEntrada(d1, 'default', 1, 2);
 
             setTimeout(()=>{
                 flotar(robot, 'i');
                 hablar(robot, 'i');
-            }, 2000);
-        }
-
-        function dialogo1(){
-            pausarHablar();
-            aplicacion.reproducirAudio(audio[1], botonParpadea, 2);
-            animacionEntrada(d1, 'default', 1, 2);
-
-            setTimeout(()=>{
-                reanudarHablar();
             }, 2000);
         }
 
@@ -448,7 +438,7 @@
 
         boton.click(function(){
             if(boton.css('cursor') == 'pointer'){
-                aplicacion.reproducirAudio(audio[2], locutar, 2);
+                aplicacion.reproducirAudio(audio[1], locutar, 2);
                 animacionEntrada(mapa, 'izquierda-derecha', 1, 1);
                 setTimeout(()=>{
                     reanudarHablar();
@@ -457,7 +447,7 @@
         });
 
         function locutar(){
-            aplicacion.reproducirAudio(audio[3], finalPagina, .5);
+            aplicacion.reproducirAudio(audio[2], finalPagina, .5);
         }
 
         function finalPagina(){

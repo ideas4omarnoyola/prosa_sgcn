@@ -420,8 +420,7 @@
             new Audio('../audios/continuidad_21.4.mp3'),
             new Audio('../audios/continuidad_21.5.mp3'),
             new Audio('../audios/continuidad_21.6.mp3'),
-            new Audio('../audios/continuidad_21.7.mp3'),
-            new Audio('../audios/continuidad_21.8.mp3'),
+            new Audio('../audios/continuidad_21.7.mp3')
         ]
 
         // Al cargarse la página
@@ -434,7 +433,7 @@
             aplicacion.reproducirAudio(audio[0], esquema1, 2);
             animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
             animacionEntrada(robot, 'derecha-izquierda', 1, 1);
-            
+            animacionEntrada(d1, 'derecha-izquierda', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot, 'i');
@@ -442,20 +441,11 @@
             }, 1500);
         }
 
-        function dialogo1(){
-            aplicacion.reproducirAudio(audio[1], esquema1, 2);
-            animacionEntrada(d1, 'derecha-izquierda', 1, 1);
-
-            setTimeout(()=>{
-                reanudarHablar();
-            }, 2000);
-        }
-
         function esquema1(){
             pausarHablar();
             animacionSalida(d1, 'default', 1);
 
-            aplicacion.reproducirAudio(audio[2], esquema2, 2);
+            aplicacion.reproducirAudio(audio[1], esquema2, 2);
             animacionEntrada(e1, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -465,7 +455,7 @@
 
         function esquema2(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[3], esquema3, 2);
+            aplicacion.reproducirAudio(audio[2], esquema3, 2);
             animacionEntrada(e2, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -475,7 +465,7 @@
 
         function esquema3(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[4], esquema4, 2);
+            aplicacion.reproducirAudio(audio[3], esquema4, 2);
             animacionEntrada(e3, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -485,7 +475,7 @@
 
         function esquema4(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[5], esquema5, 2);
+            aplicacion.reproducirAudio(audio[4], esquema5, 2);
             animacionEntrada(e4, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -495,7 +485,7 @@
 
         function esquema5(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[6], esquema6, 2);
+            aplicacion.reproducirAudio(audio[5], esquema6, 2);
             animacionEntrada(e5, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -505,7 +495,7 @@
 
         function esquema6(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[7], esquema7, 2);
+            aplicacion.reproducirAudio(audio[6], esquema7, 2);
             animacionEntrada(e6, 'default', 1, 1);
             animacionEntrada(e7, 'default', 1, 6);
             animacionEntrada(e8, 'default', 1, 6);
@@ -517,7 +507,7 @@
 
         function esquema7(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[8], finPantalla, 2);
+            aplicacion.reproducirAudio(audio[7], finPantalla, 2);
 
             setTimeout(()=>{
                 reanudarHablar();
@@ -525,6 +515,7 @@
         }
 
         function finPantalla(){
+            pararHablar();
             aplicacion.terminaPantalla();
         }
 
