@@ -195,7 +195,7 @@ body{
 .cont-temas{
     padding: 20px 10px;
     height: 570px;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 
 .temas{

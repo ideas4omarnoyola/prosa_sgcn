@@ -473,7 +473,9 @@
             girarIzquierda(engrane1, 10);
             girarDerecha(engrane2, 10);
             girarIzquierda(engrane3, 10);
-            aplicacion.terminaPantalla();
+            setTimeout(()=>{
+                aplicacion.siguientePagina();
+            }, 5000);
         });
 
     </script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página 58</title>
+    <title>Página 61</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/estilos.css">
@@ -29,6 +29,8 @@
     <img class="elementos" id="pregunta" src="../img/pagina61/pregunta.png" data-posX="0" data-posY="0"/>
     <img class="elementos respuestas" id="r1" src="../img/pagina61/r1.png" data-posX="396" data-posY="398"/>
     <img class="elementos respuestas" id="r2" src="../img/pagina61/r2.png" data-posX="609" data-posY="398"/>
+    <img class="elementos" id="p1" src="../img/pagina61/paloma.png" data-posX="530" data-posY="398"/>
+    <img class="elementos" id="t1" src="../img/pagina61/tache.png" data-posX="750" data-posY="398"/>
 
     
     <!-- Script de la página -->
@@ -40,7 +42,8 @@
         const pregunta = $('#pregunta');
         const r1 = $('#r1');
         const r2 = $('#r2');
-        const r3 = $('#r3');
+        const p1 = $('#p1');
+        const t1 = $('#t1');
         const respuestas = $('.respuestas');
 
         // Audios------------------------------------------------------
@@ -61,7 +64,6 @@
             animacionEntrada(pregunta, 'derecha-izquierda', 1, 1);
             animacionEntrada(r1, 'default', 1, 2);
             animacionEntrada(r2, 'default', 1, 2.5);
-            animacionEntrada(r3, 'default', 1, 3);
         }
 
         function elegir(){
@@ -71,14 +73,24 @@
         r1.click(function(){
             if(r1.css('cursor') == 'pointer'){
                 aplicacion.reproducirAudio(audio[1], finalPagina, 0);
+                animacionEntrada(p1, 'default', .5);
             }
         });
 
         r2.click(function(){
             if(r2.css('cursor') == 'pointer'){
                 audio[2].play();
+                entradaTache(t1);
             }
         });
+
+        function entradaTache(tache){
+            animacionEntrada(tache, 'default', .5);
+
+            setTimeout(()=>{
+                animacionSalida(tache, 'default', .5);
+            }, 2000);
+        }
 
         function finalPagina(){
             aplicacion.siguientePagina();

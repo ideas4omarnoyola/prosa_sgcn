@@ -27,9 +27,12 @@
 
     <img class="elementos" id="titulo" src="../img/pagina57/titulo.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="pregunta" src="../img/pagina57/pregunta.png" data-posX="0" data-posY="0"/>
-    <img class="elementos respuestas" id="r1" src="../img/pagina57/r1.png" data-posX="44" data-posY="358"/>
-    <img class="elementos respuestas" id="r2" src="../img/pagina57/r2.png" data-posX="369" data-posY="358"/>
-    <img class="elementos respuestas" id="r3" src="../img/pagina57/r3.png" data-posX="694" data-posY="358"/>
+    <img class="elementos respuestas" id="r1" src="../img/pagina57/r1.png" data-posX="44" data-posY="308"/>
+    <img class="elementos respuestas" id="r2" src="../img/pagina57/r2.png" data-posX="369" data-posY="308"/>
+    <img class="elementos respuestas" id="r3" src="../img/pagina57/r3.png" data-posX="694" data-posY="308"/>
+    <img class="elementos" id="p1" src="../img/pagina57/paloma.png" data-posX="300" data-posY="308"/>
+    <img class="elementos" id="t1" src="../img/pagina57/tache.png" data-posX="630" data-posY="308"/>
+    <img class="elementos" id="t2" src="../img/pagina57/tache.png" data-posX="950" data-posY="308"/>
 
     
     <!-- Script de la página -->
@@ -42,11 +45,14 @@
         const r1 = $('#r1');
         const r2 = $('#r2');
         const r3 = $('#r3');
+        const p1 = $('#p1');
+        const t1 = $('#t1');
+        const t2 = $('#t2');
         const respuestas = $('.respuestas');
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/continuidad_39.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3')
         ]
@@ -72,20 +78,31 @@
         r1.click(function(){
             if(r1.css('cursor') == 'pointer'){
                 aplicacion.reproducirAudio(audio[1], finalPagina, 0);
+                animacionEntrada(p1, 'default', .5);
             }
         });
 
         r2.click(function(){
             if(r2.css('cursor') == 'pointer'){
                 audio[2].play();
+                entradaTache(t1);
             }
         });
 
         r3.click(function(){
             if(r3.css('cursor') == 'pointer'){
                 audio[2].play();
+                entradaTache(t2);
             }
         });
+
+        function entradaTache(tache){
+            animacionEntrada(tache, 'default', .5);
+
+            setTimeout(()=>{
+                animacionSalida(tache, 'default', .5);
+            }, 2000);
+        }
 
         function finalPagina(){
             aplicacion.siguientePagina();
