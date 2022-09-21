@@ -390,6 +390,7 @@
     <img class="elementos" id="gestion" src="../img/pagina36/gestion.png" data-posX="0" data-posY="0">
     <img class="elementos" id="ti" src="../img/pagina36/ti.png" data-posX="0" data-posY="0">
     <img class="elementos" id="finanzas" src="../img/pagina36/finanzas.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="operaciones" src="../img/pagina36/operaciones.png" data-posX="0" data-posY="0">
 
     
     <!-- Script de la página -->
@@ -408,6 +409,7 @@
         const gestion = $('#gestion');
         const ti = $('#ti');
         const finanzas = $('#finanzas');
+        const operaciones = $('#operaciones');
 
         // Audios------------------------------------------------------
         const audio = [
@@ -432,6 +434,7 @@
             animacionEntrada(robot37, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(esquema, 'default', 1);
+            animacionEntrada(dialogo, 'default', 1);
 
             setTimeout(()=>{
                 flotar(robot37, 'd');
@@ -441,13 +444,7 @@
 
         function terminaDialogo(){
             pausarHablar();
-            animacionEntrada(dialogo, 'default', 1, 1);
             animacionEntrada(seguridad, 'default', 1);
-            animacionEntrada(administracion, 'default', 1);
-            animacionEntrada(riesgo, 'default', 1);
-            animacionEntrada(gestion, 'default', 1);
-            animacionEntrada(ti, 'default', 1);
-            animacionEntrada(finanzas, 'default', 1);
             aplicacion.reproducirAudio(audio[1], esquema1, 1);
             
             setTimeout(() => {
@@ -457,26 +454,32 @@
 
         function esquema1(){
             aplicacion.reproducirAudio(audio[2], esquema2, 1);
+            animacionEntrada(administracion, 'default', 1);
         }
 
         function esquema2(){
             aplicacion.reproducirAudio(audio[3], esquema3, 1);
+            animacionEntrada(gestion, 'default', 1);
         }
 
         function esquema3(){
             aplicacion.reproducirAudio(audio[4], esquema4, 1);
+            animacionEntrada(finanzas, 'default', 1);
         }
 
         function esquema4(){
             aplicacion.reproducirAudio(audio[5], esquema5, 1);
+            animacionEntrada(riesgo, 'default', 1);
         }
 
         function esquema5(){
             aplicacion.reproducirAudio(audio[6], esquema6, 1);
+            animacionEntrada(operaciones, 'default', 1);   
         }
-
+        
         function esquema6(){
             aplicacion.reproducirAudio(audio[7], terminaPagina, 1);
+            animacionEntrada(ti, 'default', 1);
         }
 
         function terminaPagina(){

@@ -411,7 +411,6 @@
             new Audio('../audios/continuidad_50.2.mp3'),
             new Audio('../audios/continuidad_50.3.mp3'),
             new Audio('../audios/continuidad_50.4.mp3'),
-            new Audio('../audios/continuidad_50.5.mp3'),
             new Audio('../audios/alerta.mp3')
         ]
 
@@ -422,9 +421,10 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], dialogo1, 2);
+            aplicacion.reproducirAudio(audio[0], leer1, 2);
             animacionEntrada(titulo, 'derecha-izquierda', 1, 1);
             animacionEntrada(robot, 'derecha-izquierda', 1, 1.5);
+            animacionEntrada(d1, 'derecha-izquierda', 1, 3);
 
             setTimeout(()=>{
                 flotar(robot, 'i');
@@ -432,14 +432,9 @@
             }, 1000);
         }
 
-        function dialogo1(){
-            aplicacion.reproducirAudio(audio[1], leer1, 2);
-            animacionEntrada(d1, 'derecha-izquierda', 1, 2);
-        }
-
         function leer1(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[2], leer2, 1);
+            aplicacion.reproducirAudio(audio[1], leer2, 1);
             animacionSalida(d1, 'default', 1);
             animacionEntrada(texto1, 'default', 1, 1);
             setTimeout(()=>{
@@ -449,7 +444,7 @@
 
         function leer2(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[3], leer3, 1);
+            aplicacion.reproducirAudio(audio[2], leer3, 1);
             animacionEntrada(texto2, 'default', 1, 1);
             setTimeout(()=>{
                 reanudarHablar();
@@ -458,7 +453,7 @@
 
         function leer3(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[4], alerta, 1);
+            aplicacion.reproducirAudio(audio[3], alerta, 1);
             animacionEntrada(texto3, 'default', 1, 1);
             setTimeout(()=>{
                 reanudarHablar();
@@ -467,11 +462,11 @@
 
         function alerta(){
             pausarHablar();
-            aplicacion.reproducirAudio(audio[6], leerAlerta, 1);
+            aplicacion.reproducirAudio(audio[5], leerAlerta, 1);
         }
 
         function leerAlerta(){
-            aplicacion.reproducirAudio(audio[5], finalPagina, 1);
+            aplicacion.reproducirAudio(audio[4], finalPagina, 1);
             animacionEntrada(advertencia, 'default', 1, 1);
             setTimeout(()=>{
                 reanudarHablar();

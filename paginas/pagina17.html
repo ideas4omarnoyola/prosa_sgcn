@@ -389,11 +389,11 @@
     <img class="elementos" id="p1" src="../img/pagina17/p1.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="p2" src="../img/pagina17/p2.png" data-posX="0" data-posY="0"/>
     <img class="elementos" id="p3" src="../img/pagina17/p3.png" data-posX="0" data-posY="0"/>
-    <div class="elementos drops" id="drop1" data-posX="530" data-posY="90" data-lugar="3"></div>
-    <div class="elementos drops" id="drop2" data-posX="530" data-posY="238" data-lugar="1"></div>
-    <div class="elementos drops" id="drop3" data-posX="530" data-posY="389" data-lugar="2"></div>
+    <div class="elementos drops" id="drop3" data-posX="530" data-posY="100" data-lugar="3"></div>
+    <div class="elementos drops" id="drop1" data-posX="530" data-posY="248" data-lugar="1"></div>
+    <div class="elementos drops" id="drop2" data-posX="530" data-posY="399" data-lugar="2"></div>
     <img class="elementos arrastrables" data-lugar="1" id="r1" src="../img/pagina17/r1.png" data-posX="344" data-posY="90"/>
-    <img class="elementos arrastrables" data-lugar="2" id="r2" src="../img/pagina17/r2.png" data-posX="325" data-posY="212"/>
+    <img class="elementos arrastrables" data-lugar="2" id="r2" src="../img/pagina17/r2.png" data-posX="342" data-posY="238"/>
     <img class="elementos arrastrables" data-lugar="3" id="r3" src="../img/pagina17/r3.png" data-posX="344" data-posY="389"/>
 
     
@@ -419,7 +419,7 @@
         drops.css({
             'width': '135px',
             'height': '135px',
-            'background': 'transparent'
+            'background': '#f2f2f2'
         });
 
         let dragSelect;
@@ -481,8 +481,20 @@
 
         function soltar(){
             const dragActivo = $(`#r${dragSelect}`);
+            const dropActivo = $(`#drop${dropSelect}`);
 
             if(dragSelect == dropSelect){
+
+                //Sacar el top y el left del drop 
+                const dropTop = dropActivo.css('top');
+                const dropLeft = dropActivo.css('left');
+
+                //Posicionar el drag en el drop
+                dragActivo.css({
+                    'top': dropTop,
+                    'left': dropLeft
+                });
+
                 aciertos++;
                 dragActivo.draggable({
                     revert: false,
