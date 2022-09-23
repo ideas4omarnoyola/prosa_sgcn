@@ -428,7 +428,10 @@
             aplicacion.reproducirAudio(audio[0], activarBoton, 2);
             animacionEntrada(robot04, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
-            animacionEntrada(dialogo, 'default', 1, 1.5);
+            animacionEntrada(dialogo, 'default', 1, 1);
+            animacionEntrada(mapa, 'default', 1);
+            animacionEntrada(boton, 'default', 1);
+
             setTimeout(()=>{
                 flotar(robot04, 'i');
                 hablar(robot04, 'i');
@@ -437,12 +440,7 @@
 
         function activarBoton(){
             pararHablar();
-            animacionEntrada(mapa, 'default', 1);
-            animacionEntrada(boton, 'default', 1.5);
-
-            setTimeout(() => {
-                parpadear(boton);
-            }, 1000);
+            parpadear(boton);
         }
 
         boton.click(function(){

@@ -386,6 +386,9 @@
     <img class="elementos respuestas" id="ra" src="../img/pagina26/ra.png" data-posX="260" data-posY="330">
     <img class="elementos respuestas" id="rb" src="../img/pagina26/rb.png" data-posX="260" data-posY="400">
     <img class="elementos respuestas" id="rc" src="../img/pagina26/rc.png" data-posX="260" data-posY="470">
+
+    <img class="elementos" id="retroPositiva" src="../img/pagina26/retroPositiva.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="retroNegativa" src="../img/pagina26/retroNegativa.png" data-posX="0" data-posY="0" alt="">
     
     <!-- Script de la página -->
     <script>
@@ -401,6 +404,9 @@
         const ra = $('#ra');
         const rb = $('#rb');
         const rc = $('#rc');
+
+        const retroPositiva = $('#retroPositiva');
+        const retroNegativa = $('#retroNegativa');
 
         const respuestas = $('.respuestas');
         
@@ -431,7 +437,10 @@
 
             setTimeout(()=>{
                 flotar(robot26, 'i');
+                actividad();
             }, 1500);
+
+            
         }
 
         function actividad(){
@@ -442,27 +451,35 @@
             ra.click(()=>{
                 if(ra.css('cursor') == 'pointer'){
                     aplicacion.reproducirAudio(audio[1], 1);
+                    animacionEntrada(retroNegativa, 'default', 1);
+
+                    setTimeout(() => {
+                        animacionSalida(retroNegativa, 'default', 1);
+                    }, 2000);
                 }
             });
 
             rb.click(()=>{
                 if(rb.css('cursor') == 'pointer'){
                     aplicacion.reproducirAudio(audio[0],  terminaPagina, 1);
+                    animacionEntrada(retroPositiva, 'default', 1, 1);
                 }
             });
 
             rc.click(()=>{
                 if(rc.css('cursor') == 'pointer'){
                     aplicacion.reproducirAudio(audio[1], 1);
+                    animacionEntrada(retroNegativa, 'default', 1);
+
+                    setTimeout(() => {
+                        animacionSalida(retroNegativa, 'default', 1);
+                    }, 2000);
                 }
             });
         }
 
         function terminaPagina(){
-            respuestas.css({
-                'cursor': 'default',
-            });
-            aplicacion.terminaPantalla();
+          aplicacion.siguientePagina();
         }
 
         

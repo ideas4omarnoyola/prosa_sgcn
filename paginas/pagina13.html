@@ -421,7 +421,6 @@
             new Audio('../audios/continuidad_13.3.mp3'),
             new Audio('../audios/continuidad_13.4.mp3'),
             new Audio('../audios/continuidad_13.5.mp3'),
-            new Audio('../audios/continuidad_13.6.mp3'),
         ]
 
         // Al cargarse la página
@@ -445,29 +444,21 @@
 
         function terminaDialogo(){
             pausarHablar();
+            aplicacion.reproducirAudio(audio[1], terminaCuadro01, 1);
             animacionEntrada(cuadro01, 'default', 1);
-            aplicacion.reproducirAudio(audio[1], pasaInfo01, 1);
+            animacionEntrada(info01, 'default', 1, 2.5);
             
             setTimeout(() => {
                 reanudarHablar();
             }, 1500);
         }
 
-        function pasaInfo01(){
-            pausarHablar();
-            animacionEntrada(info01, 'default', 1);
-            aplicacion.reproducirAudio(audio[2], terminaCuadro01, 1);
-            
-            setTimeout(() => {
-                reanudarHablar();
-            }, 1500);
-        }
 
         function terminaCuadro01(){
             pausarHablar();
             animacionEntrada(cable01, 'default', 1, .5);
             animacionEntrada(cuadro02, 'default', 1);
-            aplicacion.reproducirAudio(audio[3], pasaInfo02, 1);
+            aplicacion.reproducirAudio(audio[2], pasaInfo02, 1);
             
             setTimeout(() => {
                 reanudarHablar();
@@ -476,7 +467,7 @@
         function pasaInfo02(){
             pausarHablar();
             animacionEntrada(info02, 'default', 1);
-            aplicacion.reproducirAudio(audio[4], terminaCuadro02, 1);
+            aplicacion.reproducirAudio(audio[3], terminaCuadro02, 1);
             
             setTimeout(() => {
                 reanudarHablar();
@@ -488,7 +479,7 @@
 
             animacionEntrada(cable02, 'default', 1, .5);
             animacionEntrada(cuadro03, 'default', 1);
-            aplicacion.reproducirAudio(audio[5], pasaInfo03, 1);
+            aplicacion.reproducirAudio(audio[4], pasaInfo03, 1);
             
             setTimeout(() => {
                 reanudarHablar();
@@ -498,7 +489,7 @@
             pausarHablar();
 
             animacionEntrada(info03, 'default', 1);
-            aplicacion.reproducirAudio(audio[6], terminaPagina, 1);
+            aplicacion.reproducirAudio(audio[5], terminaPagina, 1);
             
             setTimeout(() => {
                 reanudarHablar();

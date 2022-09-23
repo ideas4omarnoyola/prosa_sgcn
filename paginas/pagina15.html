@@ -389,7 +389,8 @@
     <img class="elementos respuestas" id="r1" src="../img/pagina15/r1.png" data-posX="670" data-posY="150" alt="">
     <img class="elementos respuestas" id="r2" src="../img/pagina15/r2.png" data-posX="670" data-posY="280" alt="">
     <img class="elementos respuestas" id="r3" src="../img/pagina15/r3.png" data-posX="670" data-posY="410" alt="">
-
+    <img class="elementos" id="retroPositiva" src="../img/pagina15/retroPositiva.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="retroNegativa" src="../img/pagina15/retroNegativa.png" data-posX="0" data-posY="0" alt="">
 
     <!-- Script de la página -->
     <script>
@@ -407,13 +408,15 @@
         const r2 = $('#r2');
         const r3 = $('#r3');
 
+        const retroPositiva = $('#retroPositiva');
+        const retroNegativa = $('#retroNegativa');
+
         const respuestas = $('.respuestas');
 
 
         // Audios------------------------------------------------------
         const audio = [
           new Audio('../audios/continuidad_15.mp3'),
-          // new Audio('../audios/continuidad15.1.mp3'),
           new Audio('../audios/s_bien.mp3'),
           new Audio('../audios/s_mal.mp3'),
         ]
@@ -457,30 +460,40 @@
 
             r1.click(()=>{
                 if(r1.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[3], 1);
+                    aplicacion.reproducirAudio(audio[2], 1);
+                    animacionEntrada(retroNegativa, 'default', 1);
+
+                    setTimeout(() => {
+                        animacionSalida(retroNegativa, 'default', 1);
+                    }, 2000);
                 }
             });
 
             r2.click(()=>{
                 if(r2.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], terminaPagina, 1);
-                    animacionSalida(cables, 'default', .5);
-                    animacionEntrada(acierto, 'default', 1);
+                    aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+                    animacionSalida(cables, 'default', 1, .5);
+                    animacionEntrada(acierto, 'default', 1.5);
+                    animacionEntrada(retroPositiva, 'default', 1, 2.5);
                 }
             });
 
             r3.click(()=>{
                 if(r3.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[3], 1);
+                    aplicacion.reproducirAudio(audio[2], 1);
+                    animacionEntrada(retroNegativa, 'default', 1);
+
+                    setTimeout(() => {
+                        animacionSalida(retroNegativa, 'default', 1);
+                    }, 2000);
                 }
             });
         }
 
         function terminaPagina(){
-            respuestas.css({
-                'cursor': 'default',
-            });
-            aplicacion.terminaPantalla();
+            setTimeout(() => {
+              aplicacion.siguientePagina();
+            }, 2000);
         }
 
     </script>
