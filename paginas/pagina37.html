@@ -413,8 +413,12 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Prosa_Integracion_65_08.mp3'),
-            new Audio('../audios/Prosa_Integracion_65_09.mp3'),
+            new Audio('../audios/continuidad_37.mp3'),
+            new Audio('../audios/continuidad_37.1.mp3'),
+            new Audio('../audios/continuidad_37.2.mp3'),
+            new Audio('../audios/continuidad_37.3.mp3'),
+            new Audio('../audios/continuidad_37.4.mp3'),
+            new Audio('../audios/continuidad_37.5.mp3'),
         ]
 
         // Al cargarse la página
@@ -424,28 +428,66 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], terminaDialogo, 1);
+            aplicacion.reproducirAudio(audio[0], terminaTitulo, 1);
             animacionEntrada(robot38, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
-            animacionEntrada(dialogo, 'default', 1, 1);
 
             setTimeout(()=>{
                 flotar(robot38, 'd');
                 hablar(robot38, 'd');
             }, 1700);
         }
+        function terminaTitulo(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[1], terminaDialogo, 1);
+            animacionEntrada(dialogo, 'default', 1, 1);
+
+            setTimeout(() => {
+                reanudarHablar();
+            }, 1700);
+        }
 
         function terminaDialogo(){
             pausarHablar();
+            aplicacion.reproducirAudio(audio[2], terminaFase1, 1);
+
             animacionEntrada(fase1, 'default', 1);
-            animacionEntrada(info1, 'default', 1);
+            animacionEntrada(info1, 'default', 1, 1.5);
+            
+            setTimeout(() => {
+                reanudarHablar();
+            }, 1700);
+        }
+
+        function terminaFase1(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[3], terminaFase2, 1);
+
             animacionEntrada(fase2, 'default', 1);
-            animacionEntrada(info2, 'default', 1);
+            animacionEntrada(info2, 'default', 1, 1.5);
+            
+            setTimeout(() => {
+                reanudarHablar();
+            }, 1700);
+        }
+
+        function terminaFase2(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[4], terminaFase3, 1);
+
             animacionEntrada(fase3, 'default', 1);
-            animacionEntrada(info3, 'default', 1);
+            animacionEntrada(info3, 'default', 1, 1.5);
+            
+            setTimeout(() => {
+                reanudarHablar();
+            }, 1700);
+        }
+        function terminaFase3(){
+            pausarHablar();
+            aplicacion.reproducirAudio(audio[5], terminaPagina, 1);
+
             animacionEntrada(fase4, 'default', 1);
-            animacionEntrada(info4, 'default', 1);
-            aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
+            animacionEntrada(info4, 'default', 1, 1.5);
             
             setTimeout(() => {
                 reanudarHablar();
