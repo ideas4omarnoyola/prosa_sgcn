@@ -400,9 +400,10 @@
     <img class="elementos" id="img01" src="../img/pagina20/img01.png" data-posX="0" data-posY="0">
     <img class="elementos" id="img01" src="../img/pagina20/img01.png" data-posX="0" data-posY="0">
     <img class="elementos" id="btnPlay" src="../img/pagina20/btnPlay.png" data-posX="590" data-posY="210">
-    <!-- <video class="elementos" id="video01" data-posX="0" data-posY="100" style="width:1024px;height:450px;" autobuffer controls controlsList="nodownload nofullscreen">
-        <source src="videos/Video2.mp4" type="video/mp4" />
-    </video> -->
+
+    <video class="elementos" id="video1" data-posX="0" data-posY="100"  autobuffer controls controlsList="nodownload nofullscreen">
+      <source src="../videos/video1.mp4" type="video/mp4" />
+    </video>
 
     
 
@@ -420,6 +421,11 @@
         const img01 = $('#img01');
         const btnPlay = $('#btnPlay');
 
+        video1.css({
+            'width': '1020px',
+            'height': '450px'
+        });
+
 
         // Audios------------------------------------------------------
         const audio = [
@@ -433,7 +439,7 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], 1);
+            aplicacion.reproducirAudio(audio[0],activarVideo, 1);
             animacionEntrada(robot20, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1);
@@ -445,6 +451,28 @@
                 hablar(robot20, 'i');
             }, 1500);
         }
+
+        function activarVideo(){
+            pausarHablar();
+            parpadear(btnPlay);
+        }
+
+        btnPlay.click(function(){
+            if(btnPlay.css('cursor') == 'pointer'){
+                animacionSalida(robot, 'default', 1, 1);
+                animacionSalida(titulo, 'default', 1, 1);
+                animacionSalida(dialogo, 'default', 1, 1);
+                animacionSalida(img01, 'default', 1, 1);
+                animacionEntrada(video1, 'default', 1, 1);
+
+                setTimeout(()=>{
+                    document.getElementById("video1").play();
+                    video1.on("ended", function() {
+                        aplicacion.terminaPantalla();
+                    });
+                }, 1000);
+            }
+        });
 
         
 
