@@ -395,6 +395,7 @@
     <img class="elementos arrastrables" data-lugar="1" id="r1" src="../img/pagina17/r1.png" data-posX="344" data-posY="90"/>
     <img class="elementos arrastrables" data-lugar="2" id="r2" src="../img/pagina17/r2.png" data-posX="342" data-posY="238"/>
     <img class="elementos arrastrables" data-lugar="3" id="r3" src="../img/pagina17/r3.png" data-posX="344" data-posY="389"/>
+    <img class="elementos" id="retro" src="../img/pagina17/retro.png" data-posX="0" data-posY="0"/>
 
     
     <!-- Script de la página -->
@@ -411,6 +412,7 @@
         const p1 = $('#p1');
         const p2 = $('#p2');
         const p3 = $('#p3');
+        const retro = $('#retro');
 
         const arrastrables = $('.arrastrables');
         arrastrables.css('cursor', 'pointer');
@@ -504,12 +506,17 @@
 
                 if(aciertos == 3){
                     audio[1].play();
-                    aplicacion.terminaPantalla();
+                    retroBuena();
                 }
             }
             else{
                 audio[2].play();
             }
+        }
+
+        function retroBuena(){
+            animacionEntrada(retro, 'default', 1, 1);
+            aplicacion.terminaPantalla();
         }
 
     </script>

@@ -25,6 +25,12 @@
 </head>
 <body class="pagina">
 
+  
+    <img class="elementos" id="titulo" src="../img/pagina65/titulo.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="c1" src="../img/pagina65/c1.png" data-posX="0" data-posY="0"/>
+    <img class="elementos" id="c2" src="../img/pagina65/c2.png" data-posX="0" data-posY="0"/>
+    <!-- <img class="elementos" id="boton" src="../img/pagina65/boton.png" data-posX="459" data-posY="333"/> -->
+  
     <svg class="elementos" id="robot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
         <defs>
           <style>
@@ -383,11 +389,6 @@
           </g>
         </g>
     </svg>      
-
-    <img class="elementos" id="titulo" src="../img/pagina65/titulo.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="d1" src="../img/pagina65/d1.png" data-posX="0" data-posY="0"/>
-    <img class="elementos" id="boton" src="../img/pagina65/boton.png" data-posX="459" data-posY="333"/>
-
     
     <!-- Script de la página -->
     <script>
@@ -395,14 +396,16 @@
         // Variable----------------------------------------------------
         let aplicacion = parent;        
         const robot = $('#robot');
-        const d1 = $('#d1');
+        const c1 = $('#c1');
+        const c2 = $('#c2');
         const titulo = $('#titulo');
         const boton = $('#boton');
 
         // Audios------------------------------------------------------
         const audio = [
             new Audio('../audios/continuidad_65.mp3'),
-            new Audio('../audios/s_bien.mp3')
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3')
         ]
 
         // Al cargarse la página
@@ -412,9 +415,9 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], activarBoton, 2);
+            aplicacion.reproducirAudio(audio[1], cierre, 2);
             animacionEntrada(robot, 'default', 1, 1);
-            animacionEntrada(d1, 'default', 1, 1);
+            animacionEntrada(c1, 'default', 1, 1);
             animacionEntrada(titulo, 'default', 1, 1);
 
             setTimeout(()=>{
@@ -423,16 +426,31 @@
             }, 2000);
         }
 
-        function activarBoton(){
+        function cierre() {
             pausarHablar();
-            parpadear(boton);
+            aplicacion.reproducirAudio(audio[2], final, 2);  
+            animacionSalida(c1, 'default', 1);
+            animacionEntrada(c2, 'default', 1, 1);
+
+            setTimeout(()=>{
+                reanudarHablar();
+            }, 1000);
         }
 
-        boton.click(function(){
-            if(boton.css('cursor') == 'pointer'){
-                aplicacion.siguientePagina();
-            }
-        });
+        function final (){
+            pararHablar();
+        }
+
+        // function activarBoton(){
+        //     pausarHablar();
+        //     parpadear(boton);
+        // }
+
+        // boton.click(function(){
+        //     if(boton.css('cursor') == 'pointer'){
+        //         aplicacion.siguientePagina();
+        //     }
+        // });
 
         
 

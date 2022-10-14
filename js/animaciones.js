@@ -85,7 +85,7 @@ gsap.registerEffect({
     name: "parpadear",
     effect: (targets, config) => {
         return gsap.fromTo(targets, { 
-            opacity: .5
+            opacity: config.opacity
         }, {
             duration:config.duration,
             delay: config.delay,
@@ -254,11 +254,12 @@ function animacionEntrada(elemento, direccion, tiempo, delay = 0){
     }
 }
 
-function parpadear(elemento, tiempo=1, delay=0){
+function parpadear(elemento, tiempo=1, delay=0, opacity=.5){
     elemento.css('display', 'block');
     gsap.effects.parpadear(elemento, {
         delay: delay,
-        duration: tiempo
+        duration: tiempo,
+        opacity: opacity
     });
 }
 
