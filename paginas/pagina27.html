@@ -50,6 +50,8 @@
     <img class="elementos arrastrables" id="drag8" data-lugar="8" src="../img/pagina27/drag8.png" data-posX="792" data-posY="433"/>
     <img class="elementos arrastrables" id="drag9" data-lugar="9" src="../img/pagina27/drag9.png" data-posX="756" data-posY="121"/>
     <img class="elementos arrastrables" id="drag10" data-lugar="10" src="../img/pagina27/drag10.png" data-posX="756" data-posY="167"/>
+
+    <img class="elementos" id="retro" src="../img/pagina27/retro.png" data-posX="0" data-posY="0"/>
     
     <!-- Script de la página -->
     <script>
@@ -79,6 +81,7 @@
         const drop8 = $('#drop8');
         const drop9 = $('#drop9');
         const drop10 = $('#drop10');
+        const retro = $('#retro');
 
         const arrastrables = $('.arrastrables');
         arrastrables.css('cursor', 'pointer');
@@ -162,7 +165,8 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/continuidad_27.mp3')
+            new Audio('../audios/continuidad_27.mp3'),
+            new Audio('../audios/continuidad_27.1.mp3')
         ]
 
         // Al cargarse la página
@@ -240,9 +244,20 @@
                 dragActivo.css('cursor', 'default');
 
                 if(aciertos == 10){
-                    aplicacion.terminaPantalla();
+                    setTimeout(()=>{
+                        retroBuena();
+                    }, 2000);
                 }
             }
+        }
+
+        function retroBuena() {
+            aplicacion.reproducirAudio(audio[1], finPantalla, 2);  
+            animacionEntrada(retro, 'default', 1, 1);
+        }
+
+        function finPantalla(){
+            aplicacion.terminaPantalla();
         }
 
     </script>
