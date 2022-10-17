@@ -22,7 +22,7 @@
 
 </head>
 <body class="pagina">
-    <svg class="elementos" id="robot24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
+    <svg class="elementos" id="robot25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
         <defs>
           <style>
             .cls-1 {
@@ -396,7 +396,7 @@
         // Variable----------------------------------------------------
         let aplicacion = parent;
 
-        const robot24 = $('#robot24');
+        const robot25 = $('#robot25');
         const titulo = $('#titulo');
         const dialogo = $('#dialogo');
         const tablet = $('#tablet');
@@ -425,7 +425,7 @@
         });
 
         function iniciarContenido(){
-            animacionEntrada(robot24, 'default', 1);
+            animacionEntrada(robot25, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1);
             animacionEntrada(tablet, 'default', 1, 1);
@@ -436,7 +436,7 @@
 
 
             setTimeout(()=>{
-                flotar(robot24, 'i');
+                flotar(robot25, 'i');
             }, 1500);
 
             actividad();
@@ -461,19 +461,19 @@
 
             rb.click(()=>{
                 if(rb.css('cursor') == 'pointer'){
+                    aplicacion.reproducirAudio(audio[0], terminaPagina, 1);
+                    animacionEntrada(retroPositiva, 'default', 1, 1);
+                }
+            });
+
+            rc.click(()=>{
+                if(rc.css('cursor') == 'pointer'){
                     aplicacion.reproducirAudio(audio[1], 1);
                     animacionEntrada(retroNegativa, 'default', 1);
 
                     setTimeout(() => {
                         animacionSalida(retroNegativa, 'default', 1);
                     }, 2000);
-                }
-            });
-
-            rc.click(()=>{
-                if(rc.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[0],terminaPagina, 1);
-                    animacionEntrada(retroPositiva, 'default', 1, 1);
                 }
             });
         }

@@ -22,7 +22,7 @@
 
 </head>
 <body class="pagina">
-    <svg class="elementos" id="robot22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
+    <svg class="elementos" id="robot23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
         <defs>
           <style>
             .cls-1 {
@@ -396,7 +396,7 @@
         // Variable----------------------------------------------------
         let aplicacion = parent;
 
-        const robot22 = $('#robot22');
+        const robot23 = $('#robot23');
         const titulo = $('#titulo');
         const dialogo = $('#dialogo');
         const tablet = $('#tablet');
@@ -404,7 +404,6 @@
         const ra = $('#ra');
         const rb = $('#rb');
         const rc = $('#rc');
-
         const retroPositiva = $('#retroPositiva');
         const retroNegativa = $('#retroNegativa');
 
@@ -414,7 +413,6 @@
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/continuidad_22.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3'),
         ]
@@ -426,8 +424,7 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], actividad, 1);
-            animacionEntrada(robot22, 'default', 1);
+            animacionEntrada(robot23, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1);
             animacionEntrada(tablet, 'default', 1, 1);
@@ -438,13 +435,13 @@
 
 
             setTimeout(()=>{
-                flotar(robot22, 'i');
-                hablar(robot22, 'i');
+                flotar(robot23, 'i');
             }, 1500);
+
+            actividad();
         }
 
         function actividad(){
-            pararHablar();
 
             respuestas.css({
                 'cursor': 'pointer',
@@ -452,14 +449,7 @@
 
             ra.click(()=>{
                 if(ra.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[1], terminaPagina, 1);
-                    animacionEntrada(retroPositiva, 'default', 1, 1);
-                }
-            });
-
-            rb.click(()=>{
-                if(rb.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], 1);
+                    aplicacion.reproducirAudio(audio[1], 1);
                     animacionEntrada(retroNegativa, 'default', 1);
 
                     setTimeout(() => {
@@ -468,9 +458,16 @@
                 }
             });
 
+            rb.click(()=>{
+                if(rb.css('cursor') == 'pointer'){
+                    aplicacion.reproducirAudio(audio[0], terminaPagina, 1);
+                    animacionEntrada(retroPositiva, 'default', 1, 1);
+                }
+            });
+
             rc.click(()=>{
                 if(rc.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[2], 1);
+                    aplicacion.reproducirAudio(audio[1], 1);
                     animacionEntrada(retroNegativa, 'default', 1);
 
                     setTimeout(() => {

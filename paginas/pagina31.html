@@ -385,16 +385,17 @@
     <img class="elementos" id="titulo" src="../img/pagina31/titulo.png" data-posX="0" data-posY="0">
     <img class="elementos" id="texto1" src="../img/pagina31/texto1.png" data-posX="0" data-posY="0">
     <img class="elementos" id="texto2" src="../img/pagina31/texto2.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="vs" src="../img/pagina31/vs.png" data-posX="0" data-posY="0">
     <img class="elementos" id="info_btn1" src="../img/pagina31/info_btn1.png" data-posX="0" data-posY="0">
     <img class="elementos" id="info_btn2" src="../img/pagina31/info_btn2.png" data-posX="0" data-posY="0">
-    <img class="elementos" id="info_btn3" src="../img/pagina31/info_btn3.png" data-posX="0" data-posY="0">
-    <img class="elementos" id="info_btn4" src="../img/pagina31/info_btn4.png" data-posX="0" data-posY="0">
+    <!-- <img class="elementos" id="info_btn3" src="../img/pagina31/info_btn3.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="info_btn4" src="../img/pagina31/info_btn4.png" data-posX="0" data-posY="0"> -->
 
 
-    <img class="elementos" id="btn1" src="../img/pagina31/btn1.png" data-posX="80" data-posY="185">
-    <img class="elementos" id="btn2" src="../img/pagina31/btn2.png" data-posX="87" data-posY="375">
-    <img class="elementos" id="btn3" src="../img/pagina31/btn3.png" data-posX="464.355" data-posY="352.692 ">
-    <img class="elementos" id="btn4" src="../img/pagina31/btn4.png" data-posX="467.75" data-posY="189.77">
+    <img class="elementos" id="btn1" src="../img/pagina31/btn1.png" data-posX="404.706 " data-posY="201.91 ">
+    <img class="elementos" id="btn2" src="../img/pagina31/btn2.png" data-posX="404.706" data-posY="379.91">
+   <!--  <img class="elementos" id="btn3" src="../img/pagina31/btn3.png" data-posX="464.355" data-posY="352.692 ">
+    <img class="elementos" id="btn4" src="../img/pagina31/btn4.png" data-posX="467.75" data-posY="189.77"> -->
 
     
     <!-- Script de la página -->
@@ -407,23 +408,22 @@
         const titulo = $('#titulo');
         const texto1 = $('#texto1');
         const texto2 = $('#texto2');
+        const vs = $('#vs');
         const info_btn1 = $('#info_btn1');
         const info_btn2 = $('#info_btn2');
-        const info_btn3 = $('#info_btn3');
-        const info_btn4 = $('#info_btn4');
+        // const info_btn3 = $('#info_btn3');
+        // const info_btn4 = $('#info_btn4');
         const boton1 = $('#btn1');
         const boton2 = $('#btn2');
-        const boton3 = $('#btn3');
-        const boton4 = $('#btn4');
+        // const boton3 = $('#btn3');
+        // const boton4 = $('#btn4');
 
         // Audios------------------------------------------------------
         const audio = [
-          new Audio('../audios/continuidad_31.mp3'),
-          new Audio('../audios/continuidad_31.1.mp3'),
-          new Audio('../audios/continuidad_31.2.mp3'),
-          new Audio('../audios/continuidad_31.3.mp3'),
-          new Audio('../audios/continuidad_31.4.mp3'),
-          new Audio('../audios/continuidad_31.5.mp3'),
+          new Audio('../audios/continuidad_32.mp3'),
+          new Audio('../audios/continuidad_32.1.mp3'),
+          new Audio('../audios/continuidad_32.2.mp3'),
+          new Audio('../audios/continuidad_32.3.mp3')
         ]
 
         // Al cargarse la página
@@ -437,10 +437,12 @@
             animacionEntrada(robot31, 'default', 1);
             animacionEntrada(titulo, 'default', 1.5);
             animacionEntrada(texto1, 'default', .3, 0);
+            animacionEntrada(vs, 'default', .3, 0);
+            animacionEntrada(texto2, 'default', 1.5);
             animacionEntrada(boton1, 'default', 2);
             animacionEntrada(boton2, 'default', 2.3);
-            animacionEntrada(boton3, 'default', 2.5);
-            animacionEntrada(boton4, 'default', 2.8);
+            // animacionEntrada(boton3, 'default', 2.5);
+            // animacionEntrada(boton4, 'default', 2.8);
             setTimeout(()=>{
                 flotar(robot31, 'd');
                 hablar(robot31, 'd');
@@ -448,10 +450,8 @@
         }
 
         function dialogo2(){
-            pausarHablar
-            aplicacion.reproducirAudio(audio[1], activarBoton1, 1); 
-            animacionSalida(texto1, 'default', .3, 0);
-            animacionEntrada(texto2, 'default', 1);
+            pausarHablar(); 
+            aplicacion.reproducirAudio(audio[1], activarBoton1, 1);
 
             setTimeout(()=>{
                 reanudarHablar();
@@ -465,79 +465,85 @@
         }
 
          function activabtn2(){
-          pausarHablar();  
+            //esconderbtns();
+              pausarHablar(); 
              setTimeout(() => {
                 parpadear(boton2);
             }, 1000);
         }
 
-         function activabtn3(){
-            pausarHablar();  
-             setTimeout(() => {
-                parpadear(boton3);
-            }, 1000);
-        }
+        //  function activabtn3(){
+        //     //esconderbtns();
+        //      setTimeout(() => {
+        //         parpadear(boton3);
+        //     }, 1000);
+        // }
 
-         function activabtn4(){
-          pausarHablar();  
-            setTimeout(() => {
-                parpadear(boton4);
-            }, 1000);
-        }
+        //  function activabtn4(){
+        //    // esconderbtns();
+        //     setTimeout(() => {
+        //         parpadear(boton4);
+        //     }, 1000);
+        // }
 
-  function esconderbtns(){
-             boton1.hide();
-              boton2.hide();
-               boton3.hide();
-                boton4.hide();
-        }
+  // function esconderbtns(){
+  //            boton1.hide();
+  //             boton2.hide();
+  //              boton3.hide();
+  //               boton4.hide();
+  //       }
 
 
         boton1.click(function(){
             if(boton1.css('cursor') == 'pointer'){                
-                 aplicacion.reproducirAudio(audio[2], activabtn2, 1);
-                 reanudarHablar();
-                 dejarParpadear(boton1);
-                 animacionEntrada(info_btn1, 'default', 0);
-                 boton1.hide();
+                  aplicacion.reproducirAudio(audio[2], activabtn2, 1);
+                  animacionEntrada(info_btn1, 'default', 0);
+                  dejarParpadear(boton1);
+                 // boton1.hide();
+                  setTimeout(()=>{               
+                    reanudarHablar();
+            }, 1000);
+
             }
         });
 
          boton2.click(function(){
             if(boton2.css('cursor') == 'pointer'){                
-                 aplicacion.reproducirAudio(audio[3], activabtn3, 1);
-                 reanudarHablar();  
+                aplicacion.reproducirAudio(audio[3], finalPagina, 1);  
                 dejarParpadear(boton2);
-                 animacionEntrada(info_btn2, 'default', 0);
-                 boton2.hide();              
+                animacionEntrada(info_btn2, 'default', 0);
+                 // boton2.hide(); 
+                  setTimeout(()=>{               
+                    reanudarHablar();
+            }, 1000);
+
             }
         });
 
-           boton3.click(function(){
-            if(boton3.css('cursor') == 'pointer'){
+        //    boton3.click(function(){
+        //     if(boton3.css('cursor') == 'pointer'){
                 
-                 aplicacion.reproducirAudio(audio[4], activabtn4, 1);
-                 reanudarHablar(); 
-                 dejarParpadear(boton3);
-                 animacionEntrada(info_btn3, 'default', 0);
-                 boton3.hide();               
-            }
-        });
+        //          aplicacion.reproducirAudio(audio[3], activabtn4, 1); 
+        //          dejarParpadear(boton3);
+        //          animacionEntrada(info_btn3, 'default', 0);
+        //          boton3.hide();               
+        //     }
+        // });
 
-             boton4.click(function(){
-            if(boton4.css('cursor') == 'pointer'){
+        //      boton4.click(function(){
+        //     if(boton4.css('cursor') == 'pointer'){
                 
-                 aplicacion.reproducirAudio(audio[5], finalPagina, 1); 
-                 reanudarHablar();
-                 dejarParpadear(boton4);
-                 animacionEntrada(info_btn4, 'default', 0);
-                 boton4.hide();               
-            }
-        });
+        //          aplicacion.reproducirAudio(audio[4], finalPagina, 1); 
+        //          dejarParpadear(boton4);
+        //          animacionEntrada(info_btn4, 'default', 0);
+        //          boton4.hide();               
+        //     }
+        // });
 
-        function finalPagina(){
+         function finalPagina(){
           pararHablar();
-          aplicacion.terminaPantalla();
+          // aplicacion.reproducirAudio(audio[5], aplicacion.terminaPantalla, 1);
+         aplicacion.terminaPantalla();
         }
 
     </script>
