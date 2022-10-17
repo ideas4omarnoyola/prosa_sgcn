@@ -22,7 +22,7 @@
 
 </head>
 <body class="pagina">
-    <svg class="elementos" id="robot25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
+    <svg class="elementos" id="robot26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="620" viewBox="0 0 1024 620">
         <defs>
           <style>
             .cls-1 {
@@ -396,7 +396,7 @@
         // Variable----------------------------------------------------
         let aplicacion = parent;
 
-        const robot25 = $('#robot25');
+        const robot26 = $('#robot26');
         const titulo = $('#titulo');
         const dialogo = $('#dialogo');
         const tablet = $('#tablet');
@@ -425,7 +425,7 @@
         });
 
         function iniciarContenido(){
-            animacionEntrada(robot25, 'default', 1);
+            animacionEntrada(robot26, 'default', 1);
             animacionEntrada(titulo, 'default', 1);
             animacionEntrada(dialogo, 'default', 1, 1);
             animacionEntrada(tablet, 'default', 1, 1);
@@ -436,14 +436,14 @@
 
 
             setTimeout(()=>{
-                flotar(robot25, 'i');
+                flotar(robot26, 'i');
+                actividad();
             }, 1500);
 
-            actividad();
+            
         }
 
         function actividad(){
-
             respuestas.css({
                 'cursor': 'pointer',
             });
@@ -461,7 +461,7 @@
 
             rb.click(()=>{
                 if(rb.css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audio[0], terminaPagina, 1);
+                    aplicacion.reproducirAudio(audio[0],  terminaPagina, 1);
                     animacionEntrada(retroPositiva, 'default', 1, 1);
                 }
             });

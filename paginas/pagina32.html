@@ -385,7 +385,6 @@
     <img class="elementos" id="titulo" src="../img/pagina32/titulo.png" data-posX="0" data-posY="0">
     <img class="elementos" id="texto1" src="../img/pagina32/texto1.png" data-posX="0" data-posY="0">
     <img class="elementos" id="texto2" src="../img/pagina32/texto2.png" data-posX="0" data-posY="0">
-    <img class="elementos" id="vs" src="../img/pagina32/vs.png" data-posX="0" data-posY="0">
     <img class="elementos" id="info_btn1" src="../img/pagina32/info_btn1.png" data-posX="0" data-posY="0">
     <img class="elementos" id="info_btn2" src="../img/pagina32/info_btn2.png" data-posX="0" data-posY="0">
     <!-- <img class="elementos" id="info_btn3" src="../img/pagina32/info_btn3.png" data-posX="0" data-posY="0">
@@ -408,7 +407,6 @@
         const titulo = $('#titulo');
         const texto1 = $('#texto1');
         const texto2 = $('#texto2');
-        const vs = $('#vs');
         const info_btn1 = $('#info_btn1');
         const info_btn2 = $('#info_btn2');
         // const info_btn3 = $('#info_btn3');
@@ -420,10 +418,9 @@
 
         // Audios------------------------------------------------------
         const audio = [
-          new Audio('../audios/continuidad_32.mp3'),
-          new Audio('../audios/continuidad_32.1.mp3'),
-          new Audio('../audios/continuidad_32.2.mp3'),
-          new Audio('../audios/continuidad_32.3.mp3')
+            new Audio('../audios/continuidad_33.mp3'),
+            new Audio('../audios/continuidad_33.1.mp3'),
+            new Audio('../audios/continuidad_33.2.mp3')
         ]
 
         // Al cargarse la página
@@ -433,12 +430,11 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], dialogo2, 1);
+            aplicacion.reproducirAudio(audio[0], activarBoton1, 1);
             animacionEntrada(robot31, 'default', 1);
             animacionEntrada(titulo, 'default', 1.5);
             animacionEntrada(texto1, 'default', .3, 0);
-            animacionEntrada(vs, 'default', .3, 0);
-            animacionEntrada(texto2, 'default', 1.5);
+             animacionEntrada(texto2, 'default', 1.5);
             animacionEntrada(boton1, 'default', 2);
             animacionEntrada(boton2, 'default', 2.3);
             // animacionEntrada(boton3, 'default', 2.5);
@@ -447,15 +443,6 @@
                 flotar(robot31, 'd');
                 hablar(robot31, 'd');
             }, 1500);
-        }
-
-        function dialogo2(){
-            pausarHablar(); 
-            aplicacion.reproducirAudio(audio[1], activarBoton1, 1);
-
-            setTimeout(()=>{
-                reanudarHablar();
-            }, 1000);
         }
 
 
@@ -496,9 +483,9 @@
 
         boton1.click(function(){
             if(boton1.css('cursor') == 'pointer'){                
-                  aplicacion.reproducirAudio(audio[2], activabtn2, 1);
-                  animacionEntrada(info_btn1, 'default', 0);
-                  dejarParpadear(boton1);
+                 aplicacion.reproducirAudio(audio[1], activabtn2, 1);
+                 dejarParpadear(boton1);
+                 animacionEntrada(info_btn1, 'default', 0);
                  // boton1.hide();
                   setTimeout(()=>{               
                     reanudarHablar();
@@ -509,9 +496,9 @@
 
          boton2.click(function(){
             if(boton2.css('cursor') == 'pointer'){                
-                aplicacion.reproducirAudio(audio[3], finalPagina, 1);  
+                 aplicacion.reproducirAudio(audio[2], finalPagina, 1);  
                 dejarParpadear(boton2);
-                animacionEntrada(info_btn2, 'default', 0);
+                 animacionEntrada(info_btn2, 'default', 0);
                  // boton2.hide(); 
                   setTimeout(()=>{               
                     reanudarHablar();
