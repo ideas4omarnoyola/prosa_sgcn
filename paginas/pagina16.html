@@ -417,6 +417,7 @@
         const audio = [
           new Audio('../audios/s_bien.mp3'),
           new Audio('../audios/s_mal.mp3'),
+          new Audio('../audios/continuidad_15.mp3'),
         ]
 
         // Al cargarse la página
@@ -427,6 +428,7 @@
         });
 
         function iniciarContenido(){
+            aplicacion.reproducirAudio(audio[2], actividad, 1);
             animacionEntrada(robot16, 'default', 1, 1);
             animacionEntrada(titulo, 'default', 1, 1);
             animacionEntrada(dialogo, 'default', 1, 1);
@@ -438,10 +440,7 @@
 
             setTimeout(()=>{
                 flotar(robot16, 'i');
-            }, 1500);
-
-            actividad();
-            
+            }, 1500);            
         }
 
         function actividad(){

@@ -436,16 +436,16 @@
     <img class="elementos" id="pregunta8" src="../img/pagina48/pregunta8.png" data-posX="393" data-posY="124">
 
 
-    <div class="elementos" id="casilla1" data-posX="439" data-posY="221" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla2" data-posX="439" data-posY="298" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla3" data-posX="439" data-posY="376" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla4" data-posX="439" data-posY="454" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla5" data-posX="695" data-posY="221" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla6" data-posX="695" data-posY="298" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla7" data-posX="695" data-posY="376" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla8" data-posX="695" data-posY="454" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla9" data-posX="939" data-posY="221" style="width:35px;  height:35px; border: solid black;"></div>
-    <div class="elementos" id="casilla10" data-posX="939" data-posY="298" style="width:35px;  height:35px; border: solid black;"></div>
+    <div class="elementos" id="casilla1" data-posX="439" data-posY="221" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla2" data-posX="439" data-posY="298" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla3" data-posX="439" data-posY="376" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla4" data-posX="439" data-posY="454" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla5" data-posX="695" data-posY="221" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla6" data-posX="695" data-posY="298" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla7" data-posX="695" data-posY="376" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla8" data-posX="695" data-posY="454" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla9" data-posX="939" data-posY="221" style="width:35px;  height:35px;"></div>
+    <div class="elementos" id="casilla10" data-posX="939" data-posY="298" style="width:35px;  height:35px;"></div>
   
     <img class="elementos" id="paloma1" src="../img/pagina48/paloma1.png" data-posX="442" data-posY="227">
     <img class="elementos" id="paloma2" src="../img/pagina48/paloma2.png" data-posX="442" data-posY="305">
@@ -480,7 +480,7 @@
 
     <img class="elementos" id="btnCerrar01" src="../img/pagina48/btnCerrar01.png" data-posX="710" data-posY="190">
     <img class="elementos" id="btnCerrar02" src="../img/pagina48/btnCerrar02.png" data-posX="710" data-posY="180">
-    <img class="elementos" id="btnCerrar03" src="../img/pagina48/btnCerrar03.png" data-posX="960" data-posY="100">
+    <img class="elementos" id="btnCerrar03" src="../img/pagina48/btnCerrar03.png" data-posX="0" data-posY="0">
     <img class="elementos" id="btnCerrar04" src="../img/pagina48/btnCerrar04.png" data-posX="710" data-posY="190">
     <img class="elementos" id="btnCerrar05" src="../img/pagina48/btnCerrar05.png" data-posX="710" data-posY="190">
     <img class="elementos" id="btnCerrar06" src="../img/pagina48/btnCerrar06.png" data-posX="710" data-posY="190">
@@ -916,8 +916,11 @@
                 'opacity': '1',
                 'cursor' : 'pointer'
             });
+            btnCerrar03.css({
+                'opacity': '1',
+                'cursor' : 'pointer'
+            });
 
-            parpadear(btnCerrar03);
         }
 
         btnAtras.click(function () {
@@ -1662,7 +1665,7 @@
                 TweenMax.killTweensOf(btnCerrar03);
                 
                 aplicacion.detenerAudios();   
-                dejarParpadear(btnCerrar03);
+                // dejarParpadear(btnCerrar03);
                 animacionSalida(robot02, 'default', 1);
                 animacionSalida(base03, 'default', 1);
                 animacionSalida(info1, 'default', 1);
