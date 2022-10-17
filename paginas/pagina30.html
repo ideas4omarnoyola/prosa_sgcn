@@ -400,7 +400,7 @@
     <img class="elementos" id="btnCerrar01" src="../img/pagina30/btnCerrar01.png" data-posX="710" data-posY="190">
     <img class="elementos" id="btnCerrar02" src="../img/pagina30/btnCerrar02.png" data-posX="710" data-posY="190">
     <img class="elementos" id="btnCerrar03" src="../img/pagina30/btnCerrar03.png" data-posX="710" data-posY="190">
-    <img class="elementos" id="btnCerrar04" src="../img/pagina30/btnCerrar04.png" data-posX="710" data-posY="190">
+    <img class="elementos" id="btnCerrar04" src="../img/pagina30/btnCerrar04.png" data-posX="770" data-posY="190">
 
     
     <!-- Script de la página -->
@@ -558,11 +558,7 @@
         btn03.click(function () {
             if (btn03.css('cursor') == 'pointer') {
                 TweenMax.killTweensOf(btn03);
-                btn03.css({
-                    'opacity': '1',
-                });
-
-                dejarParpadear(btn03);
+                dejarParpadear(btn03, true);
                 aplicacion.reproducirAudio(audio[3], terminaAudioBtn03, 1);
                 animacionEntrada(info03, 'default', 1, 1);
             }
