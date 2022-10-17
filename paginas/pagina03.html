@@ -398,6 +398,7 @@
     <img class="elementos" id="titulo" src="../img/pagina03/titulo.png" data-posX="0" data-posY="0">
     <img class="elementos" id="dialogo01" src="../img/pagina03/dialogo01.png" data-posX="0" data-posY="0">
     <img class="elementos" id="dialogo02" src="../img/pagina03/dialogo02.png" data-posX="0" data-posY="0">
+    <img class="elementos" id="instrucciones" src="../img/pagina03/instrucciones.png" data-posX="0" data-posY="0">
     <img class="elementos" id="boton" src="../img/pagina03/boton.png" data-posX="700" data-posY="200">
 
     
@@ -412,11 +413,13 @@
         const dialogo02 = $('#dialogo02');
         const boton = $('#boton');
         const robot03 = $('#robot03');
+        const instrucciones = $('#instrucciones');
 
         // Audios------------------------------------------------------
         const audio = [
           new Audio('../audios/continuidad_3.mp3'),
           new Audio('../audios/continuidad_3.1.mp3'),
+          new Audio('../audios/continuidad_3.3.mp3'),
         ]
 
         // Al cargarse la página
@@ -440,24 +443,29 @@
             pausarHablar();
             animacionEntrada(dialogo01, 'izquierda-derecha', 1, 1);
             animacionEntrada(dialogo02, 'default', 1, 4);
-            aplicacion.reproducirAudio(audio[1], clickBtn, 1);
+            aplicacion.reproducirAudio(audio[1], locutarInstrucciones, 1);
   
             setTimeout(() => {
                 reanudarHablar();
             }, 1500);
         }
 
+        function locutarInstrucciones(){
+          aplicacion.reproducirAudio(audio[2], clickBtn, 1);
+          animacionEntrada(instrucciones, 'default', 1);
+        }
+
         function clickBtn(){
             pararHablar();
             parpadear(boton);
-
-            boton.click(function(){
-                if(boton.css('cursor') == 'pointer'){
-                    dejarParpadear(boton);
-                    aplicacion.siguientePagina();
-                }
-            });
         }
+
+        boton.click(function(){
+            if(boton.css('cursor') == 'pointer'){
+                dejarParpadear(boton);
+                aplicacion.siguientePagina();
+            }
+        });
 
     </script>
 </body>

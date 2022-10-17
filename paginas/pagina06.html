@@ -399,8 +399,6 @@
     <img class="elementos" id="dialogo" src="../img/pagina06/dialogo.png" data-posX="0" data-posY="0">
     <img class="elementos" id="boton" src="../img/pagina06/boton.png" data-posX="470" data-posY="220">
     <img class="elementos" id="info" src="../img/pagina06/info.png" data-posX="370" data-posY="360">
-    <img class="elementos" id="btnCerrar" src="../img/pagina06/btnCerrar.png" data-posX="855" data-posY="345">
-
     
     <!-- Script de la página -->
     <script>
@@ -413,7 +411,6 @@
         const dialogo = $('#dialogo');
         const info = $('#info');
         const boton = $('#boton');
-        const btnCerrar = $('#btnCerrar');
 
         // Audios------------------------------------------------------
         const audio = [
@@ -450,41 +447,19 @@
                 TweenMax.killTweensOf(boton);
                 dejarParpadear(boton);
 
-                aplicacion.reproducirAudio(audio[1], terminaInfo, 2);
+                aplicacion.reproducirAudio(audio[1], finalPagina, 2);
                 animacionEntrada(info, 'default', 1, 1);
 
                 setTimeout(() => {
                     reanudarHablar();
                 }, 1500);
             }
-
-            boton.css({
-                'opacity': '1',
-                'cursor' : 'pointer'
-            });
         });
 
-        function terminaInfo(){
-            parpadear(btnCerrar);
+        function finalPagina(){
             pararHablar();
+            aplicacion.terminaPantalla();
         }
-
-        btnCerrar.click(function(){
-            if(btnCerrar.css('cursor') == 'pointer'){
-                TweenMax.killTweensOf(btnCerrar);
-                btnCerrar.css({
-                    'opacity': '1',
-                });
-
-                dejarParpadear(btnCerrar);
-                animacionSalida(info, 'default', 1, 1);
-                animacionSalida(btnCerrar, 'default', 1, 1);
-
-                setTimeout(() => {
-                    aplicacion.terminaPantalla();
-                }, 1000);
-            }
-        });
 
     </script>
 </body>

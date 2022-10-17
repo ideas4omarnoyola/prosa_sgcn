@@ -391,8 +391,6 @@
     <img class="elementos respuestas" id="r3" src="../img/pagina16/r3.png" data-posX="670" data-posY="410" alt="">
 
     <img class="elementos" id="retroPositiva" src="../img/pagina16/retroPositiva.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="retroNegativa" src="../img/pagina16/retroNegativa.png" data-posX="0" data-posY="0" alt="">
-
 
     <!-- Script de la página -->
     <script>
@@ -411,7 +409,6 @@
         const r3 = $('#r3');
 
         const retroPositiva = $('#retroPositiva');
-        const retroNegativa = $('#retroNegativa');
 
         const respuestas = $('.respuestas');
 
@@ -456,22 +453,12 @@
             r1.click(()=>{
                 if(r1.css('cursor') == 'pointer'){
                     aplicacion.reproducirAudio(audio[1], 1);
-                    animacionEntrada(retroNegativa, 'default', 1);
-
-                    setTimeout(() => {
-                        animacionSalida(retroNegativa, 'default', 1);
-                    }, 2000);
                 }
             });
 
             r2.click(()=>{
                 if(r2.css('cursor') == 'pointer'){
                     aplicacion.reproducirAudio(audio[1], 1);
-                    animacionEntrada(retroNegativa, 'default', 1);
-
-                    setTimeout(() => {
-                        animacionSalida(retroNegativa, 'default', 1);
-                    }, 2000);
                 }
             });
 
