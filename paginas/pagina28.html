@@ -389,6 +389,7 @@
     <img class="elementos carpetas" id="c1" src="../img/pagina28/c1.png" data-posX="265" data-posY="294"/>
     <img class="elementos carpetas" id="c2" src="../img/pagina28/c2.png" data-posX="514" data-posY="294"/>
     <img class="elementos carpetas" id="c3" src="../img/pagina28/c3.png" data-posX="749" data-posY="294"/>
+    <img class="elementos carpetas" id="retro" src="../img/pagina28/retro.png" data-posX="0" data-posY="0"/>
 
     
     <!-- Script de la página -->
@@ -403,13 +404,15 @@
         const c2 = $('#c2');
         const c3 = $('#c3');
         const d1 = $('#d1');
+        const retro = $('#retro');
         const carpetas = $('.carpetas');
 
         // Audios------------------------------------------------------
         const audio = [
             new Audio('../audios/continuidad_29.mp3'),
             new Audio('../audios/s_bien.mp3'),
-            new Audio('../audios/s_mal.mp3')
+            new Audio('../audios/s_mal.mp3'),
+            new Audio('../audios/continuidad_29.1.mp3'),
         ]
 
         // Al cargarse la página
@@ -458,6 +461,11 @@
         });
 
         function finalPagina(){
+            aplicacion.reproducirAudio(audio[3], final, 0);
+            animacionEntrada(retro, 'default', 1, 1);
+        }
+
+        function final() {  
             aplicacion.terminaPantalla();
         }
 

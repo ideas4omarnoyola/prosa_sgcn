@@ -402,7 +402,7 @@
     <img class="elementos arrastrables" id="drag3" data-id="3" src="../img/pagina37/escenario3.png" data-posX="750" data-posY="350"/>
     <img class="elementos arrastrables" id="drag4" data-id="4" src="../img/pagina37/escenario4.png" data-posX="750" data-posY="450"/>
 
-
+    <img class="elementos" id="retro" src="../img/pagina37/retro.png" data-posX="0" data-posY="0"/>
     
     <!-- Script de la página -->
     <script>
@@ -414,6 +414,7 @@
         const titulo = $('#titulo');
         const dialogo = $('#dialogo');
         const fondo = $('#fondo');
+        const retro = $('#retro');
 
         const ejemplo1 = $('#ejemplo1');
         const ejemplo2 = $('#ejemplo2');
@@ -442,6 +443,7 @@
             new Audio('../audios/continuidad_38.mp3'),
             new Audio('../audios/s_bien.mp3'),
             new Audio('../audios/s_mal.mp3'),
+            new Audio('../audios/continuidad_38.1.mp3'),
         ]
 
         // Al cargarse la página
@@ -527,9 +529,14 @@
                 dragActivo.css('cursor', 'default');
 
                 if(aciertos == 4){
-                    aplicacion.terminaPantalla();
+                    aplicacion.reproducirAudio(audio[3], final, 1);
+                    animacionEntrada(retro, 'default', 1, 1);
                 }
             }
+        }
+
+        function final() {  
+            aplicacion.terminaPantalla();
         }
 
     </script>
